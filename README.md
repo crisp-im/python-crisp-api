@@ -1,6 +1,6 @@
 # python-crisp-api
 
-The Crisp API Golang wrapper. Authenticate, send messages, fetch conversations, access your agent accounts from your Python code.
+The Crisp API Python wrapper. Authenticate, send messages, fetch conversations, access your agent accounts from your Python code.
 
 Copyright 2018 Crisp IM SARL. See LICENSE for copying information.
 
