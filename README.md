@@ -57,7 +57,7 @@ client.authenticate(identifier, key)
 
 ## Resource Methods
 
-Most of the available Crisp API resources are implemented. **Programmatic methods names are named after their label name in the [API Reference](https://docs.crisp.chat/api/v1/)**.
+Most useful available Crisp API resources are implemented. **Programmatic methods names are named after their label name in the [API Reference](https://docs.crisp.chat/api/v1/)**.
 
 Thus, it is straightforward to look for them in the library while reading the [API Reference](https://docs.crisp.chat/api/v1/).
 
@@ -73,3 +73,109 @@ client.user.create_user_account({
   "last_name": "Doe"
 })
 ```
+
+### Bucket
+
+* **Bucket URL**
+  * **Generate Bucket URL**: `client.bucket.generate_bucket_url`
+
+### User
+
+* **User Availability**
+  * **Get User Availability**: `client.user.get_user_availability`
+  * **Update User Availability**: `client.user.update_user_availability`
+  * **Get User Availability Status**: `client.user.get_user_availability_status`
+
+* **User Account Base**
+  * **Get User Account**: `client.user.get_user_account`
+  * **Create User Account**: `client.user.create_user_account`
+
+* **User Account Websites**
+  * **List Websites**: `client.user.list_websites`
+
+* **User Account Profile**
+  * **Get Profile**: `client.user.get_profile`
+  * **Update Profile**: `client.user.update_profile`
+
+* **User Session**
+  * **Check Session Validity**: `client.user.check_session_validity`
+  * **Create A New Session**: `client.user.create_new_session`
+  * **Destroy A Session**: `client.user.destroy_session`
+  * **Recover A Session**: `client.user.recover_session`
+
+* **User Statistics**
+  * **Count Total Unread Messages**: `client.user.count_total_unread_messages`
+
+### Website
+
+* **Website Base**
+  * **Create Website**: `client.website.create_website`
+  * **Get A Website**: `client.website.get_website`
+  * **Delete A Website**: `client.website.delete_website`
+
+* **Website Batch**
+  * **Batch Resolve Items**: `client.website.batch_resolve_items`
+  * **Batch Read Items**: `client.website.batch_read_items`
+  * **Batch Remove Items**: `client.website.batch_remove_items`
+
+* **Website Availability**
+  * **Get Website Availability Status**: `client.website.get_website_availability_status`
+
+* **Website Operator**
+  * **List Website Operators**: `client.website.list_website_operators`
+  * **List Last Active Website Operators**: `client.website.list_last_active_website_operators`
+
+* **Website Settings**
+  * **Get Website Settings**: `client.website.get_website_settings`
+  * **Update Website Settings**: `client.website.update_website_settings`
+
+* **Website Visitors**
+  * **Count Visitors**: `client.website.count_visitors`
+  * **List Visitors**: `client.website.list_visitors`
+  * **Pinpoint Visitors On A Map**: `client.website.pinpoint_visitors_on_map`
+
+* **Website Conversations**
+  * **List Conversations**: `client.website.list_conversations`
+
+* **Website Conversation**
+  * **Create A New Conversation**: `client.website.create_new_conversation`
+  * **Check If Conversation Exists**: `client.website.check_conversation_exists`
+  * **Get A Conversation**: `client.website.get_conversation`
+  * **Remove A Conversation**: `client.website.remove_conversation`
+  * **Initiate A Conversation With Existing Session**: `client.website.initiate_conversation_with_existing_session`
+  * **Get Messages In Conversation**: `client.website.get_messagesinconversation`
+  * **Send A Message In Conversation**: `client.website.send_messageinconversation`
+  * **Update A Message In Conversation**: `client.website.update_messageinconversation`
+  * **Compose A Message In Conversation**: `client.website.compose_messageinconversation`
+  * **Mark Messages As Read In Conversation**: `client.website.mark_messages_read_in_conversation`
+  * **Mark Messages As Delivered In Conversation**: `client.website.mark_messages_delivered_in_conversation`
+  * **Update Conversation Open State**: `client.website.update_conversation_open_state`
+  * **Get Conversation Routing Assign**: `client.website.get_conversation_routing_assign`
+  * **Assign Conversation Routing**: `client.website.assign_conversation_routing`
+  * **Get Conversation Metas**: `client.website.get_conversation_metas`
+  * **Update Conversation Metas**: `client.website.update_conversation_metas`
+  * **List Conversation Pages**: `client.website.list_conversation_pages`
+  * **List Conversation Events**: `client.website.list_conversation_events`
+  * **Get Conversation State**: `client.website.get_conversation_state`
+  * **Change Conversation State**: `client.website.change_conversation_state`
+  * **Get Block Status For Conversation**: `client.website.get_block_status_for_conversation`
+  * **Block Incoming Messages For Conversation**: `client.website.block_incoming_messages_for_conversation`
+  * **Request Email Transcript For Conversation**: `client.website.request_email_transcript_for_conversation`
+
+* **Website People**
+  * **Get People Statistics**: `client.website.get_people_statistics`
+  * **List People Segments**: `client.website.list_people_segments`
+  * **List People Profiles**: `client.website.list_people_profiles`
+  * **Add New People Profile**: `client.website.add_new_people_profile`
+  * **Check If People Profile Exists**: `client.website.check_people_profile_exists`
+  * **Get People Profile**: `client.website.get_people_profile`
+  * **Save People Profile**: `client.website.save_people_profile`
+  * **Update People Profile**: `client.website.update_people_profile`
+  * **Remove People Profile**: `client.website.remove_people_profile`
+  * **List People Conversations**: `client.website.list_people_conversations`
+  + **Add A People Event**: `client.website.add_people_event`
+  + **List People Events**: `client.website.list_people_events`
+  + **Get People Data**: `client.website.get_people_data`
+  + **Save People Data**: `client.website.save_people_data`
+  + **Get People Subscription Status**: `client.website.get_people_subscription_status`
+  + **Update People Subscription Status**: `client.website.update_people_subscription_status`
