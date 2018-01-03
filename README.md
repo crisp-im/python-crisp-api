@@ -101,7 +101,6 @@ client.user.create_user_account({
   * **Check Session Validity**: `client.user.check_session_validity`
   * **Create A New Session**: `client.user.create_new_session`
   * **Destroy A Session**: `client.user.destroy_session`
-  * **Recover A Session**: `client.user.recover_session`
 
 * **User Statistics**
   * **Count Total Unread Messages**: `client.user.count_total_unread_messages`
@@ -132,7 +131,6 @@ client.user.create_user_account({
 * **Website Visitors**
   * **Count Visitors**: `client.website.count_visitors`
   * **List Visitors**: `client.website.list_visitors`
-  * **Pinpoint Visitors On A Map**: `client.website.pinpoint_visitors_on_map`
 
 * **Website Conversations**
   * **List Conversations**: `client.website.list_conversations`
@@ -149,7 +147,6 @@ client.user.create_user_account({
   * **Compose A Message In Conversation**: `client.website.compose_message_in_conversation`
   * **Mark Messages As Read In Conversation**: `client.website.mark_messages_read_in_conversation`
   * **Mark Messages As Delivered In Conversation**: `client.website.mark_messages_delivered_in_conversation`
-  * **Update Conversation Open State**: `client.website.update_conversation_open_state`
   * **Get Conversation Routing Assign**: `client.website.get_conversation_routing_assign`
   * **Assign Conversation Routing**: `client.website.assign_conversation_routing`
   * **Get Conversation Metas**: `client.website.get_conversation_metas`

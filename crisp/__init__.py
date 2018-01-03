@@ -63,11 +63,8 @@ class Crisp(object):
     try:
       with request.urlopen(req, None, self.get_timeout()) as response:
         data = response.read()
-        status = response.code
         raised_error = None
     except error.HTTPError as e:
-      status = e.code
-      response = None
       raised_error = e
 
     # Raise intercepted error?
