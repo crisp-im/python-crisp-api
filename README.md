@@ -143,10 +143,10 @@ client.user.create_user_account({
   * **Get A Conversation**: `client.website.get_conversation`
   * **Remove A Conversation**: `client.website.remove_conversation`
   * **Initiate A Conversation With Existing Session**: `client.website.initiate_conversation_with_existing_session`
-  * **Get Messages In Conversation**: `client.website.get_messagesinconversation`
-  * **Send A Message In Conversation**: `client.website.send_messageinconversation`
-  * **Update A Message In Conversation**: `client.website.update_messageinconversation`
-  * **Compose A Message In Conversation**: `client.website.compose_messageinconversation`
+  * **Get Messages In Conversation**: `client.website.get_messages_in_conversation`
+  * **Send A Message In Conversation**: `client.website.send_message_in_conversation`
+  * **Update A Message In Conversation**: `client.website.update_message_in_conversation`
+  * **Compose A Message In Conversation**: `client.website.compose_message_in_conversation`
   * **Mark Messages As Read In Conversation**: `client.website.mark_messages_read_in_conversation`
   * **Mark Messages As Delivered In Conversation**: `client.website.mark_messages_delivered_in_conversation`
   * **Update Conversation Open State**: `client.website.update_conversation_open_state`
