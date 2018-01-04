@@ -21,7 +21,7 @@ Then, import it:
 from crisp_api import Crisp
 ```
 
-Construct a new authenticated Crisp client with your `user_id` and `secret_key` tokens.
+Construct a new authenticated Crisp client with your `identifier` and `key` tokens.
 
 ```python
 client = Crisp()
