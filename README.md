@@ -63,15 +63,22 @@ Thus, it is straightforward to look for them in the library while reading the [A
 
 In the following method prototypes, `crisp` is to be replaced with your Crisp API instance. For example, instanciate `client = Crisp()` and then call eg: `client.user.check_session_validity()`.
 
-When calling a method that writes data to the API (eg: `client.user.create_user_account()`), you need to build an account instance and submit it this way:
+When calling a method that writes data to the API (eg. send a message with: `client.website.send_message_in_conversation()`), you need to submit it this way:
 
 ```python
-client.user.create_user_account({
-  "email": "john@acme-inc.com",
-  "password": "SecurePassword",
-  "first_name": "John",
-  "last_name": "Doe"
-})
+website_id = "88972681-a00c-4b3b-a383-cab281636484"
+session_id = "session_9df2a21e-f113-41d4-8ed2-bad8b49cafd1"
+
+client.website.send_message_in_conversation(
+  website_id, session_id,
+
+  {
+    "type": "text",
+    "content": "This message was sent from python-crisp-api! :)",
+    "from": "operator",
+    "origin": "chat"
+  }
+)
 ```
 
 ### Website
