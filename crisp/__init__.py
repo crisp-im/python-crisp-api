@@ -16,7 +16,7 @@ from .resources.website import WebsiteResource
 
 class Crisp(object):
   REQUEST_HEADERS = {
-    "User-Agent": "python-crisp-api/1.0.1",
+    "User-Agent": "python-crisp-api/1.0.2",
     "Content-Type": "application/json"
   }
 
@@ -93,7 +93,7 @@ class Crisp(object):
     if "error" in result and result["error"] is True:
       raise RouteError(result["reason"] if ("reason" in result) else "error")
 
-    return result
+    return result["data"] if "data" in result else {}
 
   def __prepare_rest_url(self, resource):
     return self.get_rest_host() + self.get_rest_base_path() + resource
