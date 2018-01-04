@@ -5,7 +5,7 @@ from setuptools import find_packages
 
 setup(
     name='crisp-api',
-    version='1.0.0',
+    version='1.0.1',
     author=u'Valerian Saliou',
     author_email='valerian@valeriansaliou.name',
     packages=find_packages(),
