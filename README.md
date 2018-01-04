@@ -74,63 +74,7 @@ client.user.create_user_account({
 })
 ```
 
-### Bucket
-
-* **Bucket URL**
-  * **Generate Bucket URL**: `client.bucket.generate_bucket_url`
-
-### User
-
-* **User Availability**
-  * **Get User Availability**: `client.user.get_user_availability`
-  * **Update User Availability**: `client.user.update_user_availability`
-  * **Get User Availability Status**: `client.user.get_user_availability_status`
-
-* **User Account Base**
-  * **Get User Account**: `client.user.get_user_account`
-  * **Create User Account**: `client.user.create_user_account`
-
-* **User Account Websites**
-  * **List Websites**: `client.user.list_websites`
-
-* **User Account Profile**
-  * **Get Profile**: `client.user.get_profile`
-  * **Update Profile**: `client.user.update_profile`
-
-* **User Session**
-  * **Check Session Validity**: `client.user.check_session_validity`
-  * **Create A New Session**: `client.user.create_new_session`
-  * **Destroy A Session**: `client.user.destroy_session`
-
-* **User Statistics**
-  * **Count Total Unread Messages**: `client.user.count_total_unread_messages`
-
 ### Website
-
-* **Website Base**
-  * **Create Website**: `client.website.create_website`
-  * **Get A Website**: `client.website.get_website`
-  * **Delete A Website**: `client.website.delete_website`
-
-* **Website Batch**
-  * **Batch Resolve Items**: `client.website.batch_resolve_items`
-  * **Batch Read Items**: `client.website.batch_read_items`
-  * **Batch Remove Items**: `client.website.batch_remove_items`
-
-* **Website Availability**
-  * **Get Website Availability Status**: `client.website.get_website_availability_status`
-
-* **Website Operator**
-  * **List Website Operators**: `client.website.list_website_operators`
-  * **List Last Active Website Operators**: `client.website.list_last_active_website_operators`
-
-* **Website Settings**
-  * **Get Website Settings**: `client.website.get_website_settings`
-  * **Update Website Settings**: `client.website.update_website_settings`
-
-* **Website Visitors**
-  * **Count Visitors**: `client.website.count_visitors`
-  * **List Visitors**: `client.website.list_visitors`
 
 * **Website Conversations**
   * **List Conversations**: `client.website.list_conversations`
@@ -176,3 +120,59 @@ client.user.create_user_account({
   + **Save People Data**: `client.website.save_people_data`
   + **Get People Subscription Status**: `client.website.get_people_subscription_status`
   + **Update People Subscription Status**: `client.website.update_people_subscription_status`
+
+* **Website Base**
+  * **Create Website**: `client.website.create_website`
+  * **Get A Website**: `client.website.get_website`
+  * **Delete A Website**: `client.website.delete_website`
+
+* **Website Batch**
+  * **Batch Resolve Items**: `client.website.batch_resolve_items`
+  * **Batch Read Items**: `client.website.batch_read_items`
+  * **Batch Remove Items**: `client.website.batch_remove_items`
+
+* **Website Availability**
+  * **Get Website Availability Status**: `client.website.get_website_availability_status`
+
+* **Website Operator**
+  * **List Website Operators**: `client.website.list_website_operators`
+  * **List Last Active Website Operators**: `client.website.list_last_active_website_operators`
+
+* **Website Settings**
+  * **Get Website Settings**: `client.website.get_website_settings`
+  * **Update Website Settings**: `client.website.update_website_settings`
+
+* **Website Visitors**
+  * **Count Visitors**: `client.website.count_visitors`
+  * **List Visitors**: `client.website.list_visitors`
+
+### Bucket
+
+* **Bucket URL**
+  * **Generate Bucket URL**: `client.bucket.generate_bucket_url`
+
+### User
+
+* **User Availability**
+  * **Get User Availability**: `client.user.get_user_availability`
+  * **Update User Availability**: `client.user.update_user_availability`
+  * **Get User Availability Status**: `client.user.get_user_availability_status`
+
+* **User Account Base**
+  * **Get User Account**: `client.user.get_user_account`
+  * **Create User Account**: `client.user.create_user_account`
+
+* **User Account Websites**
+  * **List Websites**: `client.user.list_websites`
+
+* **User Account Profile**
+  * **Get Profile**: `client.user.get_profile`
+  * **Update Profile**: `client.user.update_profile`
+
+* **User Session**
+  * **Check Session Validity**: `client.user.check_session_validity`
+  * **Create A New Session**: `client.user.create_new_session`
+  * **Destroy A Session**: `client.user.destroy_session`
+
+* **User Statistics**
+  * **Count Total Unread Messages**: `client.user.count_total_unread_messages`
