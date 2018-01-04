@@ -50,6 +50,21 @@ class Crisp(object):
   def get(self, resource, query):
     return self.__do_get(resource, query)
 
+  def head(self, resource):
+    # TODO
+
+  def remove(self, resource):
+    # TODO
+
+  def post(self, resource, data):
+    # TODO
+
+  def patch(self, resource, data):
+    # TODO
+
+  def put(self, resource, data):
+    # TODO
+
   def __do_get(self, resource, query):
     url = "%s?%s" % (self.__prepare_rest_url(resource), parse.urlencode(query))
 

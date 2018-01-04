@@ -9,38 +9,41 @@ class UserResource(object):
   def __init__(self, parent):
     self.parent = parent
 
+  def __url_user(self, resource):
+    return "/user%s" % resource
+
   def get_user_availability(self):
-    # TODO
+    return self.parent.get(self.__url_user("/availability"))
 
   def update_user_availability(self, data):
-    # TODO
+    return self.parent.patch(self.__url_user("/availability"), data)
 
   def get_user_availability_status(self):
-    # TODO
+    return self.parent.get(self.__url_user("/availability/status"))
 
   def get_user_account(self):
-    # TODO
+    return self.parent.get(self.__url_user("/account"))
 
   def create_user_account(self, data):
-    # TODO
+    return self.parent.post(self.__url_user("/account"), data)
 
   def list_websites(self):
-    # TODO
+    return self.parent.get(self.__url_user("/account/websites"))
 
   def get_profile(self):
-    # TODO
+    return self.parent.get(self.__url_user("/account/profile"))
 
   def update_profile(self, data):
-    # TODO
+    return self.parent.patch(self.__url_user("/account/profile"), data)
 
   def check_session_validity(self):
-    # TODO
+    return self.parent.head(self.__url_user("/session"))
 
   def create_new_session(self, data):
-    # TODO
+    return self.parent.post(self.__url_user("/session/login"))
 
   def destroy_session(self):
-    # TODO
+    return self.parent.post(self.__url_user("/session/logout"))
 
   def count_total_unread_messages(self):
-    # TODO
+    return self.parent.get(self.__url_user("/stats/unread"))
