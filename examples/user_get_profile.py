@@ -10,8 +10,8 @@ from crisp_api import Crisp
 client = Crisp()
 
 client.authenticate(
-  "7c3ef21c-1e04-41ce-8c06-5605c346f73e",
-  "cc29e1a5086e428fcc6a697d5837a66d82808e65c5cce006fbf2191ceea80a0a"
+  "13937834-f6ce-4556-ae4f-9e0c54faf038",
+  "eb6c3623245521d7a6c35f5b29f3fa756e893f034ed551d84518961c5ff16dec"
 )
 
 data = client.user.get_profile()

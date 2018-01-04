@@ -47,23 +47,28 @@ class Crisp(object):
   def set_timeout(self, timeout):
     self.__timeout = timeout
 
-  def get(self, resource, query):
+  def get(self, resource, query={}):
     return self.__do_get(resource, query)
 
   def head(self, resource):
     # TODO
+    return 0
 
   def remove(self, resource):
     # TODO
+    return 0
 
-  def post(self, resource, data):
+  def post(self, resource, data={}):
     # TODO
+    return 0
 
-  def patch(self, resource, data):
+  def patch(self, resource, data={}):
     # TODO
+    return 0
 
-  def put(self, resource, data):
+  def put(self, resource, data={}):
     # TODO
+    return 0
 
   def __do_get(self, resource, query):
     url = "%s?%s" % (self.__prepare_rest_url(resource), parse.urlencode(query))
