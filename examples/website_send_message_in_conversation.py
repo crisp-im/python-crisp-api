@@ -5,7 +5,9 @@
 # Author: Valerian Saliou <valerian@valeriansaliou.name>
 ##
 
-from crisp_api import Crisp
+import sys
+sys.path.append('..')
+from crisp import Crisp
 
 client = Crisp()
 

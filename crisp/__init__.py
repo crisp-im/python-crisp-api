@@ -6,14 +6,20 @@
 ##
 
 import json
-from urllib import request, parse, error
-from base64 import b64encode as b64
+from requests import request
+from requests.auth import HTTPBasicAuth
 
+from .errors.route import RouteError
 from .resources.bucket import BucketResource
 from .resources.user import UserResource
 from .resources.website import WebsiteResource
 
 class Crisp(object):
+  REQUEST_HEADERS = {
+    "User-Agent": "python-crisp-api/1.0.0",
+    "Content-Type": "application/json"
+  }
+
   def __init__(self):
     self.__auth = {}
 
@@ -48,56 +54,46 @@ class Crisp(object):
     self.__timeout = timeout
 
   def get(self, resource, query={}):
-    return self.__do_get(resource, query)
+    return self.__do_request("GET", resource, query=query)
 
   def head(self, resource):
-    # TODO
-    return 0
+    return self.__do_request("HEAD", resource)
 
   def remove(self, resource):
-    # TODO
-    return 0
+    return self.__do_request("DELETE", resource)
 
   def post(self, resource, data={}):
-    # TODO
-    return 0
+    return self.__do_request("POST", resource, data=data)
 
   def patch(self, resource, data={}):
-    # TODO
-    return 0
+    return self.__do_request("PATCH", resource, data=data)
 
   def put(self, resource, data={}):
-    # TODO
-    return 0
+    return self.__do_request("PUT", resource, data=data)
 
-  def __do_get(self, resource, query):
-    url = "%s?%s" % (self.__prepare_rest_url(resource), parse.urlencode(query))
+  def __do_request(self, method, resource, query=None, data=None):
+    auth = None
 
-    headers = {
-      "User-Agent": "python-crisp-api/1.0.0",
-      "Authorization": self.__generate_auth()
-    }
+    if "identifier" in self.__auth and "key" in self.__auth:
+      auth = HTTPBasicAuth(self.__auth["identifier"], self.__auth["key"])
 
-    req = request.Request(url, None, headers)
+    req = request(
+      method,
+      self.__prepare_rest_url(resource),
+      timeout=self.get_timeout(),
+      verify=True,
+      headers=self.REQUEST_HEADERS,
+      auth=auth,
+      params=query,
+      data=(json.dumps(data) if data != None else None)
+    )
 
-    try:
-      with request.urlopen(req, None, self.get_timeout()) as response:
-        data = response.read()
-        raised_error = None
-    except error.HTTPError as e:
-      raised_error = e
+    result = req.json()
 
-    # Raise intercepted error?
-    if raised_error:
-      raise raised_error
+    if "error" in result and result["error"] is True:
+      raise RouteError(result["reason"] if ("reason" in result) else "error")
 
-    return json.loads(data) if data else None
-
-  def __generate_auth(self):
-    raw = "%s:%s" % (self.__auth["identifier"], self.__auth["key"])
-    key = b64(raw.encode("ascii"))
-
-    return "Basic %s" % key.decode("ascii")
+    return result
 
   def __prepare_rest_url(self, resource):
     return self.get_rest_host() + self.get_rest_base_path() + resource

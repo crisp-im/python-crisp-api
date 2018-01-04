@@ -20,5 +20,8 @@ setup(
         'Natural Language :: English',
         'Programming Language :: Python',
     ],
+    install_requires=[
+        'requests',
+    ],
     zip_safe=False,
 )
