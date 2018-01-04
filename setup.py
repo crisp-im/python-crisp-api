@@ -10,7 +10,7 @@ setup(
     author_email='valerian@valeriansaliou.name',
     packages=find_packages(),
     include_package_data=True,
-    url='https://github.com/crisp-im/go-crisp-api',
+    url='https://github.com/crisp-im/python-crisp-api',
     license='MIT - http://opensource.org/licenses/mit-license.php',
     description='Crisp API Python.',
     long_description=open('README.md').read(),
