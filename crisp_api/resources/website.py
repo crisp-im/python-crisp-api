@@ -136,7 +136,7 @@ class WebsiteResource(object):
     return self.parent.get(self.__url_website(website_id, "/people/profiles/%d" % page_number))
 
   def add_new_people_profile(self, website_id, data):
-    return self.parent.post(self.__url_website(website_id, "/people/profile"))
+    return self.parent.post(self.__url_website(website_id, "/people/profile"), data)
 
   def check_people_profile_exists(self, website_id, people_id):
     return self.parent.head(self.__url_people("profile", website_id, people_id, ""))

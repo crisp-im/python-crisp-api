@@ -40,7 +40,7 @@ class UserResource(object):
     return self.parent.head(self.__url_user("/session"))
 
   def create_new_session(self, data):
-    return self.parent.post(self.__url_user("/session/login"))
+    return self.parent.post(self.__url_user("/session/login"), data)
 
   def destroy_session(self):
     return self.parent.post(self.__url_user("/session/logout"))
