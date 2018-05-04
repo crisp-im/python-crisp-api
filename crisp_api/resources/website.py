@@ -135,6 +135,9 @@ class WebsiteResource(object):
   def list_people_profiles(self, website_id, page_number):
     return self.parent.get(self.__url_website(website_id, "/people/profiles/%d" % page_number))
 
+  def search_people_profiles(self, website_id, page_number, search_filter):
+    return self.parent.get(self.__url_website(website_id, "/people/profiles/{}?search_filter={}".format(page_number, search_filter)))
+  
   def add_new_people_profile(self, website_id, data):
     return self.parent.post(self.__url_website(website_id, "/people/profile"), data)
 
