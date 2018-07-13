@@ -70,7 +70,7 @@ class WebsiteResource(object):
     return self.parent.get(self.__url_conversation(website_id, session_id, ""))
 
   def remove_conversation(self, website_id, session_id):
-    return self.parent.delete(self.__url_conversation(website_id, session_id, ""))
+    return self.parent.remove(self.__url_conversation(website_id, session_id, ""))
 
   def initiate_conversation_with_existing_session(self, website_id, session_id):
     return self.parent.post(self.__url_conversation(website_id, session_id, "/initiate"))
