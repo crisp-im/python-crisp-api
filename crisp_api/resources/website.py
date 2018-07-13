@@ -25,7 +25,7 @@ class WebsiteResource(object):
     return self.parent.get(self.__url_website(website_id, ""))
 
   def delete_website(self, website_id):
-    return self.parent.delete(self.__url_website(website_id, ""))
+    return self.parent.remove(self.__url_website(website_id, ""))
 
   def batch_resolve_items(self, website_id, data):
     return self.parent.patch(self.__url_website(website_id, "/batch/resolve"), data)
@@ -70,7 +70,7 @@ class WebsiteResource(object):
     return self.parent.get(self.__url_conversation(website_id, session_id, ""))
 
   def remove_conversation(self, website_id, session_id):
-    return self.parent.delete(self.__url_conversation(website_id, session_id, ""))
+    return self.parent.remove(self.__url_conversation(website_id, session_id, ""))
 
   def initiate_conversation_with_existing_session(self, website_id, session_id):
     return self.parent.post(self.__url_conversation(website_id, session_id, "/initiate"))
@@ -137,7 +137,7 @@ class WebsiteResource(object):
 
   def search_people_profiles(self, website_id, page_number, search_filter):
     return self.parent.get(self.__url_website(website_id, "/people/profiles/{}?search_filter={}".format(page_number, search_filter)))
-  
+
   def add_new_people_profile(self, website_id, data):
     return self.parent.post(self.__url_website(website_id, "/people/profile"), data)
 
