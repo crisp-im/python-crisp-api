@@ -160,26 +160,7 @@ client.website.send_message_in_conversation(
 
 ### User
 
-* **User Availability**
-  * **Get User Availability**: `client.user.get_user_availability()`
-  * **Update User Availability**: `client.user.update_user_availability(data)`
-  * **Get User Availability Status**: `client.user.get_user_availability_status()`
-
-* **User Account Base**
-  * **Get User Account**: `client.user.get_user_account()`
-  * **Create User Account**: `client.user.create_user_account(data)`
-
-* **User Account Websites**
-  * **List Websites**: `client.user.list_websites()`
-
-* **User Account Profile**
-  * **Get Profile**: `client.user.get_profile()`
-  * **Update Profile**: `client.user.update_profile(data)`
-
 * **User Session**
   * **Check Session Validity**: `client.user.check_session_validity()`
   * **Create A New Session**: `client.user.create_new_session(data)`
   * **Destroy A Session**: `client.user.destroy_session()`
-
-* **User Statistics**
-  * **Count Total Unread Messages**: `client.user.count_total_unread_messages()`
