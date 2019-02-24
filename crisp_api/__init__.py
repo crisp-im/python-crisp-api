@@ -11,12 +11,11 @@ from requests.auth import HTTPBasicAuth
 
 from .errors.route import RouteError
 from .resources.bucket import BucketResource
-from .resources.user import UserResource
 from .resources.website import WebsiteResource
 
 class Crisp(object):
   REQUEST_HEADERS = {
-    "User-Agent": "python-crisp-api/1.1.0",
+    "User-Agent": "python-crisp-api/1.1.1",
     "Content-Type": "application/json"
   }
 
@@ -28,7 +27,6 @@ class Crisp(object):
     self.__timeout = None
 
     self.bucket = BucketResource(self)
-    self.user = UserResource(self)
     self.website = WebsiteResource(self)
 
   def authenticate(self, identifier, key):

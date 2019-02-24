@@ -33,13 +33,9 @@ Then, your client is ready to be consumed!
 
 ## Authentication
 
-To authenticate against the API, generate your session identifier and session key **once** using the following cURL request in your terminal (replace `YOUR_ACCOUNT_EMAIL` and `YOUR_ACCOUNT_PASSWORD`):
+To authenticate against the API, generate your session identifier and session key **once** using the [Crisp token generation utility](https://go.crisp.chat/account/token/). You'll get a token keypair made of 2 values.
 
-```bash
-curl -H "Content-Type: application/json" -X POST -d '{"email":"YOUR_ACCOUNT_EMAIL","password":"YOUR_ACCOUNT_PASSWORD"}' https://api.crisp.chat/v1/user/session/login
-```
-
-If authentication succeeds, you will get a JSON response containing your authentication keys: `identifier` and `key`. **Keep those 2 values private, and store them safely for long-term use**.
+**Keep your token keypair values private, and store them safely for long-term use.**
 
 Then, add authentication parameters to your `client` instance right after you create it:
 
@@ -53,7 +49,7 @@ client.authenticate(identifier, key)
 # Now, you can use authenticated API sections.
 ```
 
-**🔴 Important: Be sure to login once, and re-use the same authentication keys (same `identifier` + `key`) in all your subsequent requests to the API. Do not generate new tokens from your code for every new request to the API (you will be heavily rate-limited; that will induce HTTP failures for some of your API calls).**
+**🔴 Important: Make sure to generate your token once, and use the same token keys in all your subsequent requests to the API. Do not generate too many tokens, as we may invalidate your older tokens to make room for newer tokens.**
 
 ## Resource Methods
 
@@ -61,7 +57,7 @@ Most useful available Crisp API resources are implemented. **Programmatic method
 
 Thus, it is straightforward to look for them in the library while reading the [API Reference](https://docs.crisp.chat/api/v1/).
 
-In the following method prototypes, `crisp` is to be replaced with your Crisp API instance. For example, instanciate `client = Crisp()` and then call eg: `client.user.check_session_validity()`.
+In the following method prototypes, `crisp` is to be replaced with your Crisp API instance. For example, instanciate `client = Crisp()` and then call eg: `client.website.list_conversations(website_id, 1)`.
 
 When calling a method that writes data to the API (eg. send a message with: `client.website.send_message_in_conversation()`), you need to submit it this way:
 
@@ -157,10 +153,3 @@ client.website.send_message_in_conversation(
 
 * **Bucket URL**
   * **Generate Bucket URL**: `client.bucket.generate_bucket_url(data)`
-
-### User
-
-* **User Session**
-  * **Check Session Validity**: `client.user.check_session_validity()`
-  * **Create A New Session**: `client.user.create_new_session(data)`
-  * **Destroy A Session**: `client.user.destroy_session()`
