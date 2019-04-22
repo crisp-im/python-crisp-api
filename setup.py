@@ -13,7 +13,7 @@ setup(
     url='https://github.com/crisp-im/python-crisp-api',
     license='MIT - http://opensource.org/licenses/mit-license.php',
     description='Crisp API Python.',
-    long_description=open('README.md').read(),
+    long_description=open('README.md', encoding='utf-8').read(),
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
