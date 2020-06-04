@@ -14,6 +14,7 @@ setup(
     license='MIT - http://opensource.org/licenses/mit-license.php',
     description='Crisp API Python.',
     long_description=open('README.md', encoding='utf-8').read(),
+    long_description_content_type='text/markdown',
     classifiers=[
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
