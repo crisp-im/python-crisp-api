@@ -5,7 +5,7 @@ The Crisp API Python wrapper. Authenticate, send messages, fetch conversations, 
 Copyright 2018 Crisp IM SARL. See LICENSE for copying information.
 
 * **📝 Implements**: [Crisp Platform - API ~ v1](https://docs.crisp.chat/api/v1/) at reference revision: 12/31/2017
-* **😘 Maintainer**: [@valeriansaliou](https://github.com/valeriansaliou)
+* **😘 Maintainers**: [@valeriansaliou](https://github.com/valeriansaliou), [@eliottvincent](https://github.com/eliottvincent)
 
 ## Usage
 
