@@ -75,7 +75,7 @@ class Crisp(object):
     if "identifier" in self.__auth and "key" in self.__auth:
       auth = HTTPBasicAuth(self.__auth["identifier"], self.__auth["key"])
 
-    req = request(
+    res = request(
       method,
       self.__prepare_rest_url(resource),
       timeout=self.get_timeout(),
@@ -86,7 +86,7 @@ class Crisp(object):
       data=(json.dumps(data) if data != None else None)
     )
 
-    result = req.json()
+    result = self.__build_head_result(res) if method == "HEAD" else res.json()
 
     if "error" in result and result["error"] is True:
       raise RouteError(result["reason"] if ("reason" in result) else "error")
@@ -95,3 +95,21 @@ class Crisp(object):
 
   def __prepare_rest_url(self, resource):
     return self.get_rest_host() + self.get_rest_base_path() + resource
+
+  def __build_head_result(self, response):
+    result = {}
+    result["error"] = True
+
+    if (response.status_code == 200):
+      result["error"] = False
+      result["reason"] = "found";
+    elif (response.status_code == 401):
+      result["reason"] = "unauthorized";
+    elif (response.status_code == 403):
+      result["reason"] = "not_allowed";
+    elif (response.status_code == 404):
+      result["reason"] = "not_found";
+    else:
+      result["reason"] = "unsuported_code";
+
+    return result
