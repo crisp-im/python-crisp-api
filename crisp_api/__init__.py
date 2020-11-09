@@ -97,7 +97,8 @@ class Crisp(object):
     def __prepare_rest_url(self, resource):
         return self.get_rest_host() + self.get_rest_base_path() + resource
 
-    def __build_head_result(self, response):
+    @staticmethod
+    def __build_head_result(response):
         result = {}
         result["error"] = True
 

@@ -9,7 +9,8 @@ class WebsiteResource(object):
     def __init__(self, parent):
         self.parent = parent
 
-    def __url_website(self, website_id, resource):
+    @staticmethod
+    def __url_website(website_id, resource):
         return "/website/%s%s" % (website_id, resource)
 
     def __url_conversation(self, website_id, session_id, resource):

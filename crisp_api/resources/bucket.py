@@ -9,7 +9,8 @@ class BucketResource(object):
     def __init__(self, parent):
         self.parent = parent
 
-    def __url_bucket(self, resource):
+    @staticmethod
+    def __url_bucket(resource):
         return "/bucket%s" % resource
 
     def generate_bucket_url(self, data):
