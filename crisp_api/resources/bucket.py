@@ -11,7 +11,7 @@ class BucketResource(object):
 
     @staticmethod
     def __url_bucket(resource):
-        return "/bucket%s" % resource
+        return f"/bucket{resource}"
 
     def generate_bucket_url(self, data):
         return self.parent.post(self.__url_bucket("/url/generate"), data)
