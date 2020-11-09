@@ -84,7 +84,7 @@ class Crisp(object):
             headers=self.REQUEST_HEADERS,
             auth=auth,
             params=query,
-            data=(json.dumps(data) if data != None else None)
+            data=(json.dumps(data) if data is not None else None)
         )
 
         result = self.__build_head_result(res) if method == "HEAD" else res.json()
@@ -101,16 +101,16 @@ class Crisp(object):
         result = {}
         result["error"] = True
 
-        if (response.status_code == 200):
+        if response.status_code == 200:
             result["error"] = False
-            result["reason"] = "found";
-        elif (response.status_code == 401):
-            result["reason"] = "unauthorized";
-        elif (response.status_code == 403):
-            result["reason"] = "not_allowed";
-        elif (response.status_code == 404):
-            result["reason"] = "not_found";
+            result["reason"] = "found"
+        elif response.status_code == 401:
+            result["reason"] = "unauthorized"
+        elif response.status_code == 403:
+            result["reason"] = "not_allowed"
+        elif response.status_code == 404:
+            result["reason"] = "not_found"
         else:
-            result["reason"] = "unsuported_code";
+            result["reason"] = "unsuported_code"
 
         return result
