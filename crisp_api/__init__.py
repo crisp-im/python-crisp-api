@@ -13,6 +13,7 @@ from .errors.route import RouteError
 from .resources.bucket import BucketResource
 from .resources.website import WebsiteResource
 
+
 class Crisp(object):
   REQUEST_HEADERS = {
     "User-Agent": "python-crisp-api/1.1.3",
@@ -83,7 +84,7 @@ class Crisp(object):
       headers=self.REQUEST_HEADERS,
       auth=auth,
       params=query,
-      data=(json.dumps(data) if data != None else None)
+      data=(json.dumps(data) if data is not None else None)
     )
 
     result = self.__build_head_result(res) if method == "HEAD" else res.json()
@@ -96,20 +97,21 @@ class Crisp(object):
   def __prepare_rest_url(self, resource):
     return self.get_rest_host() + self.get_rest_base_path() + resource
 
-  def __build_head_result(self, response):
+  @staticmethod
+  def __build_head_result(response):
     result = {}
     result["error"] = True
 
     if (response.status_code == 200):
       result["error"] = False
-      result["reason"] = "found";
+      result["reason"] = "found"
     elif (response.status_code == 401):
-      result["reason"] = "unauthorized";
+      result["reason"] = "unauthorized"
     elif (response.status_code == 403):
-      result["reason"] = "not_allowed";
+      result["reason"] = "not_allowed"
     elif (response.status_code == 404):
-      result["reason"] = "not_found";
+      result["reason"] = "not_found"
     else:
-      result["reason"] = "unsuported_code";
+      result["reason"] = "unsuported_code"
 
     return result

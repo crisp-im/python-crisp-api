@@ -9,14 +9,15 @@ class WebsiteResource(object):
   def __init__(self, parent):
     self.parent = parent
 
-  def __url_website(self, website_id, resource):
-    return "/website/%s%s" % (website_id, resource)
+  @staticmethod
+  def __url_website(website_id, resource):
+    return f"/website/{website_id}{resource}"
 
   def __url_conversation(self, website_id, session_id, resource):
-    return self.__url_website(website_id, "/conversation/%s%s" % (session_id, resource))
+    return self.__url_website(website_id, f"/conversation/{session_id}{resource}")
 
   def __url_people(self, kind, website_id, people_id, resource):
-    return self.__url_website(website_id, "/people/%s/%s%s" % (kind, people_id, resource))
+    return self.__url_website(website_id, f"/people/{kind}/{people_id}{resource}")
 
   def create_website(self, data):
     return self.parent.post("/website", data)
@@ -55,10 +56,10 @@ class WebsiteResource(object):
     return self.parent.get(self.__url_website(website_id, "/visitors/count"))
 
   def list_visitors(self, website_id, page_number):
-    return self.parent.get(self.__url_website(website_id, "/visitors/list/%d" % page_number))
+    return self.parent.get(self.__url_website(website_id, f"/visitors/list/{page_number}"))
 
   def list_conversations(self, website_id, page_number):
-    return self.parent.get(self.__url_website(website_id, "/conversations/%d" % page_number))
+    return self.parent.get(self.__url_website(website_id, f"/conversations/{page_number}"))
 
   def create_new_conversation(self, website_id, data):
     return self.parent.post(self.__url_website(website_id, "/conversation"), data)
@@ -82,7 +83,7 @@ class WebsiteResource(object):
     return self.parent.post(self.__url_conversation(website_id, session_id, "/message"), data)
 
   def update_message_in_conversation(self, website_id, session_id, fingerprint, data):
-    return self.parent.patch(self.__url_conversation(website_id, session_id, "/message/%d" % fingerprint), data)
+    return self.parent.patch(self.__url_conversation(website_id, session_id, f"/message/{fingerprint}"), data)
 
   def compose_message_in_conversation(self, website_id, session_id, data):
     return self.parent.patch(self.__url_conversation(website_id, session_id, "/compose"), data)
@@ -106,10 +107,10 @@ class WebsiteResource(object):
     return self.parent.patch(self.__url_conversation(website_id, session_id, "/meta"), data)
 
   def list_conversation_pages(self, website_id, session_id, page_number):
-    return self.parent.get(self.__url_conversation(website_id, session_id, "/pages/%d" % page_number))
+    return self.parent.get(self.__url_conversation(website_id, session_id, f"/pages/{page_number}"))
 
   def list_conversation_events(self, website_id, session_id, page_number):
-    return self.parent.get(self.__url_conversation(website_id, session_id, "/events/%d" % page_number))
+    return self.parent.get(self.__url_conversation(website_id, session_id, f"/events/{page_number}"))
 
   def get_conversation_state(self, website_id, session_id):
     return self.parent.get(self.__url_conversation(website_id, session_id, "/state"))
@@ -130,13 +131,14 @@ class WebsiteResource(object):
     return self.parent.get(self.__url_website(website_id, "/people/stats"))
 
   def list_people_segments(self, website_id, page_number):
-    return self.parent.get(self.__url_website(website_id, "/people/segments/%d" % page_number))
+    return self.parent.get(self.__url_website(website_id, f"/people/segments/{page_number}"))
 
   def list_people_profiles(self, website_id, page_number):
-    return self.parent.get(self.__url_website(website_id, "/people/profiles/%d" % page_number))
+    return self.parent.get(self.__url_website(website_id, f"/people/profiles/{page_number}"))
 
   def search_people_profiles(self, website_id, page_number, search_filter):
-    return self.parent.get(self.__url_website(website_id, "/people/profiles/{}?search_filter={}".format(page_number, search_filter)))
+    return self.parent.get(
+      self.__url_website(website_id, "/people/profiles/{}?search_filter={}".format(page_number, search_filter)))
 
   def add_new_people_profile(self, website_id, data):
     return self.parent.post(self.__url_website(website_id, "/people/profile"), data)
@@ -157,13 +159,13 @@ class WebsiteResource(object):
     return self.parent.remove(self.__url_people("profile", website_id, people_id, ""))
 
   def list_people_conversations(self, website_id, people_id, page_number):
-    return self.parent.get(self.__url_people("conversations", website_id, people_id, "/list/%d" % page_number))
+    return self.parent.get(self.__url_people("conversations", website_id, people_id, f"/list/{page_number}"))
 
   def add_people_event(self, website_id, people_id, data):
     return self.parent.post(self.__url_people("events", website_id, people_id, ""), data)
 
   def list_people_events(self, website_id, people_id, page_number):
-    return self.parent.get(self.__url_people("events", website_id, people_id, "/list/%d" % page_number))
+    return self.parent.get(self.__url_people("events", website_id, people_id, f"/list/{page_number}"))
 
   def get_people_data(self, website_id, people_id):
     return self.parent.get(self.__url_people("data", website_id, people_id, ""))
