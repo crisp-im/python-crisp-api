@@ -6,12 +6,12 @@
 ##
 
 class BucketResource(object):
-    def __init__(self, parent):
-        self.parent = parent
+  def __init__(self, parent):
+    self.parent = parent
 
-    @staticmethod
-    def __url_bucket(resource):
-        return f"/bucket{resource}"
+  @staticmethod
+  def __url_bucket(resource):
+    return f"/bucket{resource}"
 
-    def generate_bucket_url(self, data):
-        return self.parent.post(self.__url_bucket("/url/generate"), data)
+  def generate_bucket_url(self, data):
+    return self.parent.post(self.__url_bucket("/url/generate"), data)
