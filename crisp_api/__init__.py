@@ -88,8 +88,32 @@ class Crisp(object):
 
     result = self.__build_head_result(res) if method == "HEAD" else res.json()
 
-    if "error" in result and result["error"] is True:
-      raise RouteError(result["reason"] if ("reason" in result) else "error")
+    # Request error?
+    if not res.status_code:
+      error = {}
+      error["reason"] = "error"
+      error["message"] = "internal_error"
+      error["code"] = 500
+      error["data"] = {}
+      error["data"]["namespace"] = "request"
+      error["data"]["message"] = "Got request error"
+
+      raise RouteError(error)
+
+    # Response error?
+    if res.status_code >= 400:
+      reason_message = result["reason"] if ("reason" in result) else "http_error"
+      data_message = result["data"]["message"] if ("data" in result and "message" in result["data"]) else None
+
+      error = {}
+      error["reason"] = "error"
+      error["message"] = reason_message
+      error["code"] = res.status_code
+      error["data"] = {}
+      error["data"]["namespace"] = "response"
+      error["data"]["message"] = "Got response error: " + (data_message if data_message is not None else reason_message)
+
+      raise RouteError(error)
 
     return result["data"] if "data" in result else {}
 
