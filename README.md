@@ -148,7 +148,26 @@ client.website.send_message_in_conversation(
 * **Website Visitors**
   * **Count Visitors**: `client.website.count_visitors(website_id)`
   * **List Visitors**: `client.website.list_visitors(website_id, page_number)`
+  
+### Plugin
 
+* **Plugin Connect**
+  * **Resolves the current plugin account information**: `client.get_connect_account()`
+  * **Checks whether the connected plugin session is valid**: `client.check_connect_session_validity()`
+  * **Lists all websites linked to connected plugin**: `client.list_all_connect_websites(page_number, filter_configured)`
+
+* **Plugin Subscription**
+  * **List All Active Subscriptions**: `client.list_all_active_subscriptions()`
+  * **List Subscriptions For Website**: `client.list_subscriptions_website(website_id)`
+  * **Get Subscription Details**: `client.get_subscription_details(website_id, plugin_id)`
+  * **Subscribe Website To Plugin**: `client.subscribe_plugin_to_website(website_id)`
+  * **Unsubscribe Plugin From Website**: `client.unsubscribe_plugin_from_website(website_id, plugin_id)`
+  * **Get Subscription Settings**: `client.get_subscription_settings(website_id, plugin_id)`
+  * **Save Subscription Settings**: `client.save_subscription_settings(website_id, plugin_id, settings)`
+  * **Update Subscription Settings**: `client.update_subscription_settings(website_id, plugin_id, settings)`
+  * **Forward Plugin Payload To Channel**: `client.forward_plugin_payload_to_channel(website_id, plugin_id, data)`
+  * **Dispatch Plugin EventPOST**: `client.dispatch_plugin_event(website_id, plugin_id, data)`
+  
 ### Bucket
 
 * **Bucket URL**
