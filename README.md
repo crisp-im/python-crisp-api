@@ -152,9 +152,9 @@ client.website.send_message_in_conversation(
 ### Plugin
 
 * **Plugin Connect**
-  * **Resolves the current plugin account information**: `client.get_connect_account()`
-  * **Checks whether the connected plugin session is valid**: `client.check_connect_session_validity()`
-  * **Lists all websites linked to connected plugin**: `client.list_all_connect_websites(page_number, filter_configured)`
+  * **Get Plugin Connect Account**: `client.get_connect_account()`
+  * **Check Plugin Connect Session Validity**: `client.check_connect_session_validity()`
+  * **List All Connected Websites**: `client.list_all_connect_websites(page_number, filter_configured)`
 
 * **Plugin Subscription**
   * **List All Active Subscriptions**: `client.list_all_active_subscriptions()`
@@ -166,7 +166,7 @@ client.website.send_message_in_conversation(
   * **Save Subscription Settings**: `client.save_subscription_settings(website_id, plugin_id, settings)`
   * **Update Subscription Settings**: `client.update_subscription_settings(website_id, plugin_id, settings)`
   * **Forward Plugin Payload To Channel**: `client.forward_plugin_payload_to_channel(website_id, plugin_id, data)`
-  * **Dispatch Plugin EventPOST**: `client.dispatch_plugin_event(website_id, plugin_id, data)`
+  * **Dispatch Plugin Event**: `client.dispatch_plugin_event(website_id, plugin_id, data)`
   
 ### Bucket
 
