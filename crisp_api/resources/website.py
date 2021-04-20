@@ -5,7 +5,27 @@
 # Author: Valerian Saliou <valerian@valeriansaliou.name>
 ##
 
+import urllib.parse
+
 class WebsiteResource(object):
+  SEARCH_CONVERSATIONS_QUERY_PARAMETERS = [
+    "search_query",
+    "search_type",
+    "search_operator",
+    "include_empty",
+    "filter_unread",
+    "filter_resolved",
+    "filter_not_resolved",
+    "filter_mention",
+    "filter_assigned",
+    "filter_unassigned",
+    "filter_date_start",
+    "filter_date_end",
+    "filter_date_end",
+    "order_date_created",
+    "order_date_updated",
+  ]
+
   def __init__(self, parent):
     self.parent = parent
 
@@ -58,8 +78,27 @@ class WebsiteResource(object):
   def list_visitors(self, website_id, page_number):
     return self.parent.get(self.__url_website(website_id, f"/visitors/list/{page_number}"))
 
+  def search_conversations(self, website_id, page_number, search_query = "", search_type = "", search_operator = "", include_empty = "", filter_unread = "", filter_resolved = "", filter_not_resolved = "", filter_mention = "", filter_assigned = "", filter_unassigned = "", filter_date_start = "", filter_date_end = "", order_date_created = "", order_date_updated = ""):
+    resource_url = ""
+    query_parameters = []
+
+    for parameter in self.SEARCH_CONVERSATIONS_QUERY_PARAMETERS:
+      parameter_value = locals()[parameter]
+
+      if parameter_value != "":
+        query_parameters.append(f"{parameter}={urllib.parse.quote(parameter_value)}")
+
+    if query_parameters != []:
+      query_parameters = "&".join(query_parameters)
+
+      resource_url = self.__url_website(website_id, f"/conversations/{page_number}/?{query_parameters}")
+    else:
+      resource_url = self.__url_website(website_id, f"/conversations/{page_number}")
+
+    return self.parent.get(resource_url)
+
   def list_conversations(self, website_id, page_number):
-    return self.parent.get(self.__url_website(website_id, f"/conversations/{page_number}"))
+    return self.search_conversations(self, website_id, page_number)
 
   def create_new_conversation(self, website_id, data):
     return self.parent.post(self.__url_website(website_id, "/conversation"), data)
