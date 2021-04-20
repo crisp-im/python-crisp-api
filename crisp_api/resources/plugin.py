@@ -3,7 +3,7 @@ class PluginResource(object):
         self.parent = parent
 
     @staticmethod
-    def __url_plugins_subscription(resource):
+    def __url_plugins_subscription(resource = ""):
         return f"/plugins/subscription{resource}"
 
     @staticmethod
@@ -11,7 +11,7 @@ class PluginResource(object):
         return f"/plugin/connect{resource}"
 
     def list_all_active_subscriptions(self):
-        return self.parent.get(self.__url_plugins_subscription(""))
+        return self.parent.get(self.__url_plugins_subscription())
 
     def list_subscriptions_website(self, website_id):
         return self.parent.get(self.__url_plugins_subscription(f"/{website_id}"))

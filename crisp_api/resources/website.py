@@ -10,23 +10,23 @@ class WebsiteResource(object):
     self.parent = parent
 
   @staticmethod
-  def __url_website(website_id, resource):
+  def __url_website(website_id, resource = ""):
     return f"/website/{website_id}{resource}"
 
-  def __url_conversation(self, website_id, session_id, resource):
+  def __url_conversation(self, website_id, session_id, resource = ""):
     return self.__url_website(website_id, f"/conversation/{session_id}{resource}")
 
-  def __url_people(self, kind, website_id, people_id, resource):
+  def __url_people(self, kind, website_id, people_id, resource = ""):
     return self.__url_website(website_id, f"/people/{kind}/{people_id}{resource}")
 
   def create_website(self, data):
     return self.parent.post("/website", data)
 
   def get_website(self, website_id):
-    return self.parent.get(self.__url_website(website_id, ""))
+    return self.parent.get(self.__url_website(website_id))
 
   def delete_website(self, website_id):
-    return self.parent.remove(self.__url_website(website_id, ""))
+    return self.parent.remove(self.__url_website(website_id))
 
   def batch_resolve_items(self, website_id, data):
     return self.parent.patch(self.__url_website(website_id, "/batch/resolve"), data)
@@ -65,13 +65,13 @@ class WebsiteResource(object):
     return self.parent.post(self.__url_website(website_id, "/conversation"), data)
 
   def check_conversation_exists(self, website_id, session_id):
-    return self.parent.head(self.__url_conversation(website_id, session_id, ""))
+    return self.parent.head(self.__url_conversation(website_id, session_id))
 
   def get_conversation(self, website_id, session_id):
-    return self.parent.get(self.__url_conversation(website_id, session_id, ""))
+    return self.parent.get(self.__url_conversation(website_id, session_id))
 
   def remove_conversation(self, website_id, session_id):
-    return self.parent.remove(self.__url_conversation(website_id, session_id, ""))
+    return self.parent.remove(self.__url_conversation(website_id, session_id))
 
   def initiate_conversation_with_existing_session(self, website_id, session_id):
     return self.parent.post(self.__url_conversation(website_id, session_id, "/initiate"))
@@ -138,43 +138,44 @@ class WebsiteResource(object):
 
   def search_people_profiles(self, website_id, page_number, search_filter):
     return self.parent.get(
-      self.__url_website(website_id, "/people/profiles/{}?search_filter={}".format(page_number, search_filter)))
+      self.__url_website(website_id, "/people/profiles/{}?search_filter={}".format(page_number, search_filter))
+    )
 
   def add_new_people_profile(self, website_id, data):
     return self.parent.post(self.__url_website(website_id, "/people/profile"), data)
 
   def check_people_profile_exists(self, website_id, people_id):
-    return self.parent.head(self.__url_people("profile", website_id, people_id, ""))
+    return self.parent.head(self.__url_people("profile", website_id, people_id))
 
   def get_people_profile(self, website_id, people_id):
-    return self.parent.get(self.__url_people("profile", website_id, people_id, ""))
+    return self.parent.get(self.__url_people("profile", website_id, people_id))
 
   def save_people_profile(self, website_id, people_id, data):
-    return self.parent.put(self.__url_people("profile", website_id, people_id, ""), data)
+    return self.parent.put(self.__url_people("profile", website_id, people_id), data)
 
   def update_people_profile(self, website_id, people_id, data):
-    return self.parent.patch(self.__url_people("profile", website_id, people_id, ""), data)
+    return self.parent.patch(self.__url_people("profile", website_id, people_id), data)
 
   def remove_people_profile(self, website_id, people_id):
-    return self.parent.remove(self.__url_people("profile", website_id, people_id, ""))
+    return self.parent.remove(self.__url_people("profile", website_id, people_id))
 
   def list_people_conversations(self, website_id, people_id, page_number):
     return self.parent.get(self.__url_people("conversations", website_id, people_id, f"/list/{page_number}"))
 
   def add_people_event(self, website_id, people_id, data):
-    return self.parent.post(self.__url_people("events", website_id, people_id, ""), data)
+    return self.parent.post(self.__url_people("events", website_id, people_id), data)
 
   def list_people_events(self, website_id, people_id, page_number):
     return self.parent.get(self.__url_people("events", website_id, people_id, f"/list/{page_number}"))
 
   def get_people_data(self, website_id, people_id):
-    return self.parent.get(self.__url_people("data", website_id, people_id, ""))
+    return self.parent.get(self.__url_people("data", website_id, people_id))
 
   def save_people_data(self, website_id, people_id, data):
-    return self.parent.put(self.__url_people("data", website_id, people_id, ""), data)
+    return self.parent.put(self.__url_people("data", website_id, people_id), data)
 
   def get_people_subscription_status(self, website_id, people_id):
-    return self.parent.get(self.__url_people("subscription", website_id, people_id, ""))
+    return self.parent.get(self.__url_people("subscription", website_id, people_id))
 
   def update_people_subscription_status(self, website_id, people_id, data):
-    return self.parent.patch(self.__url_people("subscription", website_id, people_id, ""), data)
+    return self.parent.patch(self.__url_people("subscription", website_id, people_id), data)
