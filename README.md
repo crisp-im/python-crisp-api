@@ -81,6 +81,7 @@ client.website.send_message_in_conversation(
 
 * **Website Conversations**
   * **List Conversations**: `client.website.list_conversations(website_id, page_number)`
+  * **Search Conversations**: `client.website.search_conversations(website_id, page_number, search_query, search_type, search_operator, include_empty, filter_unread, filter_resolved, filter_not_resolved, filter_mention, filter_assigned, filter_unassigned, filter_date_start, filter_date_end, order_date_created", order_date_updated)`
 
 * **Website Conversation**
   * **Create A New Conversation**: `client.website.create_new_conversation(website_id, data)`
@@ -148,7 +149,7 @@ client.website.send_message_in_conversation(
 * **Website Visitors**
   * **Count Visitors**: `client.website.count_visitors(website_id)`
   * **List Visitors**: `client.website.list_visitors(website_id, page_number)`
-  
+
 ### Plugin
 
 * **Plugin Connect**
@@ -167,7 +168,7 @@ client.website.send_message_in_conversation(
   * **Update Subscription Settings**: `client.update_subscription_settings(website_id, plugin_id, settings)`
   * **Forward Plugin Payload To Channel**: `client.forward_plugin_payload_to_channel(website_id, plugin_id, data)`
   * **Dispatch Plugin Event**: `client.dispatch_plugin_event(website_id, plugin_id, data)`
-  
+
 ### Bucket
 
 * **Bucket URL**
