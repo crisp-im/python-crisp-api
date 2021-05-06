@@ -98,7 +98,7 @@ class WebsiteResource(object):
     return self.parent.get(resource_url)
 
   def list_conversations(self, website_id, page_number):
-    return self.search_conversations(self, website_id, page_number)
+    return self.search_conversations(website_id, page_number)
 
   def create_new_conversation(self, website_id, data):
     return self.parent.post(self.__url_website(website_id, "/conversation"), data)
