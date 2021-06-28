@@ -42,6 +42,10 @@ Then, add authentication parameters to your `client` instance right after you cr
 ```python
 client = Crisp()
 
+# Make sure to use the correct tier if you are authenticating a plugin
+# eg. with a permanent token generated from Crisp Marketplace
+client.set_tier("plugin")
+
 # Authenticate to API (identifier, key)
 # eg. client.authenticate("13937834-f6ce-4556-ae4f-9e0c54faf038", "eb6c3623245521d7a6c35f5b29f3fa756e893f034ed551d84518961c5ff16dec")
 client.authenticate(identifier, key)

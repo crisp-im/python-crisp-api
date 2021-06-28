@@ -15,7 +15,7 @@ from .resources.website import WebsiteResource
 
 class Crisp(object):
   REQUEST_HEADERS = {
-    "User-Agent": "python-crisp-api/1.1.8",
+    "User-Agent": "python-crisp-api/1.1.9",
     "Content-Type": "application/json"
   }
 
@@ -32,6 +32,9 @@ class Crisp(object):
   def authenticate(self, identifier, key):
     self.__auth["identifier"] = identifier
     self.__auth["key"] = key
+
+  def set_tier(self, tier):
+    self.REQUEST_HEADERS["X-Crisp-Tier"] = tier
 
   def get_rest_host(self):
     return self.__rest_host or "https://api.crisp.chat"
