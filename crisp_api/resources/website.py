@@ -100,8 +100,8 @@ class WebsiteResource(object):
   def list_conversations(self, website_id, page_number):
     return self.search_conversations(website_id, page_number)
 
-  def create_new_conversation(self, website_id, data):
-    return self.parent.post(self.__url_website(website_id, "/conversation"), data)
+  def create_new_conversation(self, website_id):
+    return self.parent.post(self.__url_website(website_id, "/conversation"))
 
   def check_conversation_exists(self, website_id, session_id):
     return self.parent.head(self.__url_conversation(website_id, session_id))
