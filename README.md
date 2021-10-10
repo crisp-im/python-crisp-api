@@ -4,7 +4,7 @@ The Crisp API Python wrapper. Authenticate, send messages, fetch conversations, 
 
 Copyright 2018 Crisp IM SARL. See LICENSE for copying information.
 
-* **📝 Implements**: [Crisp Platform - API ~ v1](https://docs.crisp.chat/api/v1/) at reference revision: 12/31/2017
+* **📝 Implements**: [REST API Reference (V1)](https://docs.crisp.chat/references/rest-api/v1/) at revision: 12/31/2017
 * **😘 Maintainers**: [@valeriansaliou](https://github.com/valeriansaliou), [@eliottvincent](https://github.com/eliottvincent)
 
 ## Usage
@@ -57,9 +57,9 @@ client.authenticate(identifier, key)
 
 ## Resource Methods
 
-Most useful available Crisp API resources are implemented. **Programmatic methods names are named after their label name in the [API Reference](https://docs.crisp.chat/api/v1/)**.
+Most useful available Crisp API resources are implemented. **Programmatic methods names are named after their label name in the [REST API Reference](https://docs.crisp.chat/references/rest-api/v1/)**.
 
-Thus, it is straightforward to look for them in the library while reading the [API Reference](https://docs.crisp.chat/api/v1/).
+Thus, it is straightforward to look for them in the library while reading the [REST API Reference](https://docs.crisp.chat/references/rest-api/v1/).
 
 In the following method prototypes, `crisp` is to be replaced with your Crisp API instance. For example, instanciate `client = Crisp()` and then call eg: `client.website.list_conversations(website_id, 1)`.
 
