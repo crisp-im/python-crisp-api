@@ -15,7 +15,7 @@ from .resources.website import WebsiteResource
 
 class Crisp(object):
   REQUEST_HEADERS = {
-    "User-Agent": "python-crisp-api/1.1.2",
+    "User-Agent": "python-crisp-api/1.1.10",
     "Content-Type": "application/json"
   }
 
@@ -32,6 +32,9 @@ class Crisp(object):
   def authenticate(self, identifier, key):
     self.__auth["identifier"] = identifier
     self.__auth["key"] = key
+
+  def set_tier(self, tier):
+    self.REQUEST_HEADERS["X-Crisp-Tier"] = tier
 
   def get_rest_host(self):
     return self.__rest_host or "https://api.crisp.chat"
@@ -75,7 +78,7 @@ class Crisp(object):
     if "identifier" in self.__auth and "key" in self.__auth:
       auth = HTTPBasicAuth(self.__auth["identifier"], self.__auth["key"])
 
-    req = request(
+    res = request(
       method,
       self.__prepare_rest_url(resource),
       timeout=self.get_timeout(),
@@ -83,15 +86,58 @@ class Crisp(object):
       headers=self.REQUEST_HEADERS,
       auth=auth,
       params=query,
-      data=(json.dumps(data) if data != None else None)
+      data=(json.dumps(data) if data is not None else None)
     )
 
-    result = req.json()
+    result = self.__build_head_result(res) if method == "HEAD" else res.json()
 
-    if "error" in result and result["error"] is True:
-      raise RouteError(result["reason"] if ("reason" in result) else "error")
+    # Request error?
+    if not res.status_code:
+      error = {}
+      error["reason"] = "error"
+      error["message"] = "internal_error"
+      error["code"] = 500
+      error["data"] = {}
+      error["data"]["namespace"] = "request"
+      error["data"]["message"] = "Got request error"
+
+      raise RouteError(error)
+
+    # Response error?
+    if res.status_code >= 400:
+      reason_message = result["reason"] if ("reason" in result) else "http_error"
+      data_message = result["data"]["message"] if ("data" in result and "message" in result["data"]) else None
+
+      error = {}
+      error["reason"] = "error"
+      error["message"] = reason_message
+      error["code"] = res.status_code
+      error["data"] = {}
+      error["data"]["namespace"] = "response"
+      error["data"]["message"] = "Got response error: " + (data_message if data_message is not None else reason_message)
+
+      raise RouteError(error)
 
     return result["data"] if "data" in result else {}
 
   def __prepare_rest_url(self, resource):
     return self.get_rest_host() + self.get_rest_base_path() + resource
+
+  @staticmethod
+  def __build_head_result(response):
+    result = {}
+    result["error"] = True
+
+    if (response.status_code == 200):
+      result["error"] = False
+      result["reason"] = "found"
+    elif (response.status_code == 401):
+      result["reason"] = "unauthorized"
+    elif (response.status_code == 403):
+      result["reason"] = "not_allowed"
+    elif (response.status_code == 404):
+      result["reason"] = "not_found"
+    else:
+      result["reason"] = "unsuported_code"
+
+    return result

@@ -4,8 +4,8 @@ The Crisp API Python wrapper. Authenticate, send messages, fetch conversations, 
 
 Copyright 2018 Crisp IM SARL. See LICENSE for copying information.
 
-* **📝 Implements**: [REST API Reference (V1)](https://docs.crisp.chat/references/rest-api/v1/) at revision: 12/31/2017
-* **😘 Maintainer**: [@valeriansaliou](https://github.com/valeriansaliou)
+* **📝 Implements**: [Crisp Platform - API ~ v1](https://docs.crisp.chat/api/v1/) at reference revision: 12/31/2017
+* **😘 Maintainers**: [@valeriansaliou](https://github.com/valeriansaliou), [@eliottvincent](https://github.com/eliottvincent)
 
 ## Usage
 
@@ -42,6 +42,10 @@ Then, add authentication parameters to your `client` instance right after you cr
 ```python
 client = Crisp()
 
+# Make sure to use the correct tier if you are authenticating a plugin
+# eg. with a permanent token generated from Crisp Marketplace
+# client.set_tier("plugin")
+
 # Authenticate to API (identifier, key)
 # eg. client.authenticate("13937834-f6ce-4556-ae4f-9e0c54faf038", "eb6c3623245521d7a6c35f5b29f3fa756e893f034ed551d84518961c5ff16dec")
 client.authenticate(identifier, key)
@@ -53,9 +57,9 @@ client.authenticate(identifier, key)
 
 ## Resource Methods
 
-Most useful available Crisp API resources are implemented. **Programmatic methods names are named after their label name in the [REST API Reference](https://docs.crisp.chat/references/rest-api/v1/)**.
+Most useful available Crisp API resources are implemented. **Programmatic methods names are named after their label name in the [API Reference](https://docs.crisp.chat/api/v1/)**.
 
-Thus, it is straightforward to look for them in the library while reading the [REST API Reference](https://docs.crisp.chat/references/rest-api/v1/).
+Thus, it is straightforward to look for them in the library while reading the [API Reference](https://docs.crisp.chat/api/v1/).
 
 In the following method prototypes, `crisp` is to be replaced with your Crisp API instance. For example, instanciate `client = Crisp()` and then call eg: `client.website.list_conversations(website_id, 1)`.
 
@@ -81,9 +85,10 @@ client.website.send_message_in_conversation(
 
 * **Website Conversations**
   * **List Conversations**: `client.website.list_conversations(website_id, page_number)`
+  * **Search Conversations**: `client.website.search_conversations(website_id, page_number, search_query, search_type, search_operator, include_empty, filter_unread, filter_resolved, filter_not_resolved, filter_mention, filter_assigned, filter_unassigned, filter_date_start, filter_date_end, order_date_created", order_date_updated)`
 
 * **Website Conversation**
-  * **Create A New Conversation**: `client.website.create_new_conversation(website_id, data)`
+  * **Create A New Conversation**: `client.website.create_new_conversation(website_id)`
   * **Check If Conversation Exists**: `client.website.check_conversation_exists(website_id, session_id)`
   * **Get A Conversation**: `client.website.get_conversation(website_id, session_id)`
   * **Remove A Conversation**: `client.website.remove_conversation(website_id, session_id)`
@@ -148,6 +153,25 @@ client.website.send_message_in_conversation(
 * **Website Visitors**
   * **Count Visitors**: `client.website.count_visitors(website_id)`
   * **List Visitors**: `client.website.list_visitors(website_id, page_number)`
+
+### Plugin
+
+* **Plugin Connect**
+  * **Get Plugin Connect Account**: `client.get_connect_account()`
+  * **Check Plugin Connect Session Validity**: `client.check_connect_session_validity()`
+  * **List All Connected Websites**: `client.list_all_connect_websites(page_number, filter_configured)`
+
+* **Plugin Subscription**
+  * **List All Active Subscriptions**: `client.list_all_active_subscriptions()`
+  * **List Subscriptions For Website**: `client.list_subscriptions_website(website_id)`
+  * **Get Subscription Details**: `client.get_subscription_details(website_id, plugin_id)`
+  * **Subscribe Website To Plugin**: `client.subscribe_plugin_to_website(website_id)`
+  * **Unsubscribe Plugin From Website**: `client.unsubscribe_plugin_from_website(website_id, plugin_id)`
+  * **Get Subscription Settings**: `client.get_subscription_settings(website_id, plugin_id)`
+  * **Save Subscription Settings**: `client.save_subscription_settings(website_id, plugin_id, settings)`
+  * **Update Subscription Settings**: `client.update_subscription_settings(website_id, plugin_id, settings)`
+  * **Forward Plugin Payload To Channel**: `client.forward_plugin_payload_to_channel(website_id, plugin_id, data)`
+  * **Dispatch Plugin Event**: `client.dispatch_plugin_event(website_id, plugin_id, data)`
 
 ### Bucket
 
