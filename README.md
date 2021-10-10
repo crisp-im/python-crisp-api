@@ -9,6 +9,8 @@ Copyright 2018 Crisp IM SARL. See LICENSE for copying information.
 
 ## Usage
 
+You may follow the [REST API Quickstart](https://docs.crisp.chat/guides/rest-api/quickstart/) guide, which will get you running with the REST API in minutes.
+
 Install the library:
 
 ```bash
@@ -26,6 +28,7 @@ Construct a new authenticated Crisp client with your `identifier` and `key` toke
 ```python
 client = Crisp()
 
+client.set_tier("plugin")
 client.authenticate(identifier, key)
 ```
 
@@ -33,7 +36,7 @@ Then, your client is ready to be consumed!
 
 ## Authentication
 
-To authenticate against the API, generate your session identifier and session key **once** using the [Crisp token generation utility](https://go.crisp.chat/account/token/). You'll get a token keypair made of 2 values.
+To authenticate against the API, obtain your authentication token keypair by following the [REST API Authentication](https://docs.crisp.chat/guides/rest-api/authentication/) guide. You'll get a token keypair made of 2 values.
 
 **Keep your token keypair values private, and store them safely for long-term use.**
 
@@ -42,18 +45,13 @@ Then, add authentication parameters to your `client` instance right after you cr
 ```python
 client = Crisp()
 
-# Make sure to use the correct tier if you are authenticating a plugin
-# eg. with a permanent token generated from Crisp Marketplace
-# client.set_tier("plugin")
-
-# Authenticate to API (identifier, key)
+# Authenticate to API with your plugin token (identifier, key)
 # eg. client.authenticate("13937834-f6ce-4556-ae4f-9e0c54faf038", "eb6c3623245521d7a6c35f5b29f3fa756e893f034ed551d84518961c5ff16dec")
+client.set_tier("plugin")
 client.authenticate(identifier, key)
 
 # Now, you can use authenticated API sections.
 ```
-
-**🔴 Important: Make sure to generate your token once, and use the same token keys in all your subsequent requests to the API. Do not generate too many tokens, as we may invalidate your older tokens to make room for newer tokens.**
 
 ## Resource Methods
 
