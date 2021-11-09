@@ -213,6 +213,9 @@ class WebsiteResource(object):
   def save_people_data(self, website_id, people_id, data):
     return self.parent.put(self.__url_people("data", website_id, people_id), data)
 
+  def update_people_data(self, website_id, people_id, data):
+    return self.parent.patch(self.__url_people("data", website_id, people_id), data)
+
   def get_people_subscription_status(self, website_id, people_id):
     return self.parent.get(self.__url_people("subscription", website_id, people_id))
 

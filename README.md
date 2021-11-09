@@ -124,6 +124,7 @@ client.website.send_message_in_conversation(
   + **List People Events**: `client.website.list_people_events(website_id, people_id, page_number)`
   + **Get People Data**: `client.website.get_people_data(website_id, people_id)`
   + **Save People Data**: `client.website.save_people_data(website_id, people_id, data)`
+  + **Update People Data**: `client.website.update_people_data(website_id, people_id, data)`
   + **Get People Subscription Status**: `client.website.get_people_subscription_status(website_id, people_id)`
   + **Update People Subscription Status**: `client.website.update_people_subscription_status(website_id, people_id, data)`
 
