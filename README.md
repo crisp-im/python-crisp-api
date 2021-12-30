@@ -79,7 +79,7 @@ client.website.send_message_in_conversation(
 )
 ```
 
-👉 Note that, depending on your authentication token tier, which is either `user` or `plugin`, you may not be allowed to use all methods from the library. When in doubt, refer to the library method descriptions below. Most likely, you are using a `plugin` token.**
+**⚠️ Note that, depending on your authentication token tier, which is either `user` or `plugin`, you may not be allowed to use all methods from the library. When in doubt, refer to the library method descriptions below. Most likely, you are using a `plugin` token.**
 
 ### Website
 
@@ -168,7 +168,7 @@ client.website.send_message_in_conversation(
     * `client.website.get_people_subscription_status(website_id, people_id)` 
   + **Update People Subscription Status** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-people-subscription-status)
     * `client.website.update_people_subscription_status(website_id, people_id, data)` 
-👉 Notice: The peopleID argument can be an email or the peopleID.
+_👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
  
 
 * **Website Base**
