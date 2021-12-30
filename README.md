@@ -177,7 +177,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
     * `client.website.create_website(data)` 
   * **Get A Website** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-a-website)
     * `client.website.get_website(website_id)` 
-  * **Delete A Website** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#delete-a-website)
+  * **Delete A Website** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#delete-a-website)
     * `client.website.delete_website(website_id)` 
 
 * **Website Batch**
