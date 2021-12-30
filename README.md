@@ -168,6 +168,7 @@ client.website.send_message_in_conversation(
     * `client.website.get_people_subscription_status(website_id, people_id)` 
   + **Update People Subscription Status** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-people-subscription-status)
     * `client.website.update_people_subscription_status(website_id, people_id, data)` 
+    
 _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
  
 
