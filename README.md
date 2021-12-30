@@ -84,96 +84,96 @@ client.website.send_message_in_conversation(
 ### Website
 
 * **Website Conversations**
-  * **List Conversations**: `client.website.list_conversations(website_id, page_number)`
-  * **Search Conversations**: `client.website.search_conversations(website_id, page_number, search_query, search_type, search_operator, include_empty, filter_unread, filter_resolved, filter_not_resolved, filter_mention, filter_assigned, filter_unassigned, filter_date_start, filter_date_end, order_date_created", order_date_updated)`
+  * **List Conversations**: `client.website.list_conversations(website_id, page_number)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversations)
+  * **Search Conversations**: `client.website.search_conversations(website_id, page_number, search_query, search_type, search_operator, include_empty, filter_unread, filter_resolved, filter_not_resolved, filter_mention, filter_assigned, filter_unassigned, filter_date_start, filter_date_end, order_date_created", order_date_updated)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversations)
 
 * **Website Conversation**
-  * **Create A New Conversation**: `client.website.create_new_conversation(website_id)`
-  * **Check If Conversation Exists**: `client.website.check_conversation_exists(website_id, session_id)`
-  * **Get A Conversation**: `client.website.get_conversation(website_id, session_id)`
-  * **Remove A Conversation**: `client.website.remove_conversation(website_id, session_id)`
-  * **Initiate A Conversation With Existing Session**: `client.website.initiate_conversation_with_existing_session(website_id, session_id)`
-  * **Get Messages In Conversation**: `client.website.get_messages_in_conversation(website_id, session_id, query)`
-  * **Send A Message In Conversation**: `client.website.send_message_in_conversation(website_id, session_id, query)`
-  * **Update A Message In Conversation**: `client.website.update_message_in_conversation(website_id, session_id, fingerprint, data)`
-  * **Compose A Message In Conversation**: `client.website.compose_message_in_conversation(website_id, session_id, data)`
-  * **Mark Messages As Read In Conversation**: `client.website.mark_messages_read_in_conversation(website_id, session_id, data)`
-  * **Mark Messages As Delivered In Conversation**: `client.website.mark_messages_delivered_in_conversation(website_id, session_id, data)`
-  * **Get Conversation Routing Assign**: `client.website.get_conversation_routing_assign(website_id, session_id)`
-  * **Assign Conversation Routing**: `client.website.assign_conversation_routing(website_id, session_id, data)`
-  * **Get Conversation Metas**: `client.website.get_conversation_metas(website_id, session_id)`
-  * **Update Conversation Metas**: `client.website.update_conversation_metas(website_id, session_id, data)`
-  * **List Conversation Pages**: `client.website.list_conversation_pages(website_id, session_id, page_number)`
-  * **List Conversation Events**: `client.website.list_conversation_events(website_id, session_id, page_number)`
-  * **Get Conversation State**: `client.website.get_conversation_state(website_id, session_id)`
-  * **Change Conversation State**: `client.website.change_conversation_state(website_id, session_id, data)`
-  * **Get Block Status For Conversation**: `client.website.get_block_status_for_conversation(website_id, session_id)`
-  * **Block Incoming Messages For Conversation**: `client.website.block_incoming_messages_for_conversation(website_id, session_id, data)`
-  * **Request Email Transcript For Conversation**: `client.website.request_email_transcript_for_conversation(website_id, session_id, data)`
+  * **Create A New Conversation**: `client.website.create_new_conversation(website_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#create-a-new-conversation)
+  * **Check If Conversation Exists**: `client.website.check_conversation_exists(website_id, session_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#check-if-conversation-exists)
+  * **Get A Conversation**: `client.website.get_conversation(website_id, session_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-a-conversation)
+  * **Remove A Conversation**: `client.website.remove_conversation(website_id, session_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#remove-a-conversation)
+  * **Initiate A Conversation With Existing Session**: `client.website.initiate_conversation_with_existing_session(website_id, session_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#initiate-a-conversation-with-existing-session)
+  * **Get Messages In Conversation**: `client.website.get_messages_in_conversation(website_id, session_id, query)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-messages-in-conversation)
+  * **Send A Message In Conversation**: `client.website.send_message_in_conversation(website_id, session_id, query)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#send-a-message-in-conversation)
+  * **Update A Message In Conversation**: `client.website.update_message_in_conversation(website_id, session_id, fingerprint, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-a-message-in-conversation)
+  * **Compose A Message In Conversation**: `client.website.compose_message_in_conversation(website_id, session_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#compose-a-message-in-conversation)
+  * **Mark Messages As Read In Conversation**: `client.website.mark_messages_read_in_conversation(website_id, session_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#mark-messages-as-read-in-conversation)
+  * **Mark Messages As Delivered In Conversation**: `client.website.mark_messages_delivered_in_conversation(website_id, session_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#mark-messages-as-delivered-in-conversation)
+  * **Get Conversation Routing Assign**: `client.website.get_conversation_routing_assign(website_id, session_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-conversation-routing-assign)
+  * **Assign Conversation Routing**: `client.website.assign_conversation_routing(website_id, session_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#assign-conversation-routing)
+  * **Get Conversation Metas**: `client.website.get_conversation_metas(website_id, session_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-conversation-metas)
+  * **Update Conversation Metas**: `client.website.update_conversation_metas(website_id, session_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-conversation-metas)
+  * **List Conversation Pages**: `client.website.list_conversation_pages(website_id, session_id, page_number)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversation-pages)
+  * **List Conversation Events**: `client.website.list_conversation_events(website_id, session_id, page_number)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversation-events)
+  * **Get Conversation State**: `client.website.get_conversation_state(website_id, session_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-conversation-state)
+  * **Change Conversation State**: `client.website.change_conversation_state(website_id, session_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#change-conversation-state)
+  * **Get Block Status For Conversation**: `client.website.get_block_status_for_conversation(website_id, session_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-block-status-for-conversation)
+  * **Block Incoming Messages For Conversation**: `client.website.block_incoming_messages_for_conversation(website_id, session_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#block-incoming-messages-for-conversation)
+  * **Request Email Transcript For Conversation**: `client.website.request_email_transcript_for_conversation(website_id, session_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#request-email-transcript-for-conversation)
 
 * **Website People**
-  * **Get People Statistics**: `client.website.get_people_statistics(website_id)`
-  * **List People Segments**: `client.website.list_people_segments(website_id, page_number)`
-  * **List People Profiles**: `client.website.list_people_profiles(website_id, page_number)`
-  * **Add New People Profile**: `client.website.add_new_people_profile(website_id, data)`
-  * **Check If People Profile Exists**: `client.website.check_people_profile_exists(website_id, people_id)`
-  * **Get People Profile**: `client.website.get_people_profile(website_id, people_id)`
-  * **Save People Profile**: `client.website.save_people_profile(website_id, people_id, data)`
-  * **Update People Profile**: `client.website.update_people_profile(website_id, people_id, data)`
-  * **Remove People Profile**: `client.website.remove_people_profile(website_id, people_id)`
-  * **List People Conversations**: `client.website.list_people_conversations(website_id, people_id, page_number)`
-  + **Add A People Event**: `client.website.add_people_event(website_id, people_id, data)`
-  + **List People Events**: `client.website.list_people_events(website_id, people_id, page_number)`
-  + **Get People Data**: `client.website.get_people_data(website_id, people_id)`
-  + **Save People Data**: `client.website.save_people_data(website_id, people_id, data)`
-  + **Get People Subscription Status**: `client.website.get_people_subscription_status(website_id, people_id)`
-  + **Update People Subscription Status**: `client.website.update_people_subscription_status(website_id, people_id, data)`
+  * **Get People Statistics**: `client.website.get_people_statistics(website_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-statistics)
+  * **List People Segments**: `client.website.list_people_segments(website_id, page_number)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-suggested-people-segments)
+  * **List People Profiles**: `client.website.list_people_profiles(website_id, page_number)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-people-profiles)
+  * **Add New People Profile**: `client.website.add_new_people_profile(website_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#add-new-people-profile)
+  * **Check If People Profile Exists**: `client.website.check_people_profile_exists(website_id, people_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#check-if-people-profile-exists)
+  * **Get People Profile**: `client.website.get_people_profile(website_id, people_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-profile)
+  * **Save People Profile**: `client.website.save_people_profile(website_id, people_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#save-people-profile)
+  * **Update People Profile**: `client.website.update_people_profile(website_id, people_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-people-profile)
+  * **Remove People Profile**: `client.website.remove_people_profile(website_id, people_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#remove-people-profile)
+  * **List People Conversations**: `client.website.list_people_conversations(website_id, people_id, page_number)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-people-conversations)
+  + **Add A People Event**: `client.website.add_people_event(website_id, people_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#add-a-people-event)
+  + **List People Events**: `client.website.list_people_events(website_id, people_id, page_number)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-people-events)
+  + **Get People Data**: `client.website.get_people_data(website_id, people_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-data)
+  + **Save People Data**: `client.website.save_people_data(website_id, people_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#save-people-data)
+  + **Get People Subscription Status**: `client.website.get_people_subscription_status(website_id, people_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-subscription-status)
+  + **Update People Subscription Status**: `client.website.update_people_subscription_status(website_id, people_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-people-subscription-status)
 
 * **Website Base**
-  * **Create Website**: `client.website.create_website(data)`
-  * **Get A Website**: `client.website.get_website(website_id)`
-  * **Delete A Website**: `client.website.delete_website(website_id)`
+  * **Create Website**: `client.website.create_website(data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#create-website)
+  * **Get A Website**: `client.website.get_website(website_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-a-website)
+  * **Delete A Website**: `client.website.delete_website(website_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#delete-a-website)
 
 * **Website Batch**
-  * **Batch Resolve Items**: `client.website.batch_resolve_items(website_id, data)`
-  * **Batch Read Items**: `client.website.batch_read_items(website_id, data)`
-  * **Batch Remove Items**: `client.website.batch_remove_items(website_id, data)`
+  * **Batch Resolve Items**: `client.website.batch_resolve_items(website_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-resolve-items)
+  * **Batch Read Items**: `client.website.batch_read_items(website_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-read-items)
+  * **Batch Remove Items**: `client.website.batch_remove_items(website_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-remove-items)
 
 * **Website Availability**
-  * **Get Website Availability Status**: `client.website.get_website_availability_status(website_id)`
+  * **Get Website Availability Status**: `client.website.get_website_availability_status(website_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-website-availability-status)
 
 * **Website Operator**
-  * **List Website Operators**: `client.website.list_website_operators(website_id)`
-  * **List Last Active Website Operators**: `client.website.list_last_active_website_operators(website_id)`
+  * **List Website Operators**: `client.website.list_website_operators(website_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-website-operators)
+  * **List Last Active Website Operators**: `client.website.list_last_active_website_operators(website_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-last-active-website-operators)
 
 * **Website Settings**
-  * **Get Website Settings**: `client.website.get_website_settings(website_id)`
-  * **Update Website Settings**: `client.website.update_website_settings(website_id, data)`
+  * **Get Website Settings**: `client.website.get_website_settings(website_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-website-settings)
+  * **Update Website Settings**: `client.website.update_website_settings(website_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-website-settings)
 
 * **Website Visitors**
-  * **Count Visitors**: `client.website.count_visitors(website_id)`
-  * **List Visitors**: `client.website.list_visitors(website_id, page_number)`
+  * **Count Visitors**: `client.website.count_visitors(website_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#count-visitors)
+  * **List Visitors**: `client.website.list_visitors(website_id, page_number)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-visitors)
 
 ### Plugin
 
 * **Plugin Connect**
-  * **Get Plugin Connect Account**: `client.get_connect_account()`
-  * **Check Plugin Connect Session Validity**: `client.check_connect_session_validity()`
-  * **List All Connected Websites**: `client.list_all_connect_websites(page_number, filter_configured)`
+  * **Get Plugin Connect Account**: `client.get_connect_account()` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-connect-account)
+  * **Check Plugin Connect Session Validity**: `client.check_connect_session_validity()` [Reference](https://docs.crisp.chat/references/rest-api/v1/#check-connect-session-validity)
+  * **List All Connected Websites**: `client.list_all_connect_websites(page_number, filter_configured)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-connect-websites)
 
 * **Plugin Subscription**
-  * **List All Active Subscriptions**: `client.list_all_active_subscriptions()`
-  * **List Subscriptions For Website**: `client.list_subscriptions_website(website_id)`
-  * **Get Subscription Details**: `client.get_subscription_details(website_id, plugin_id)`
-  * **Subscribe Website To Plugin**: `client.subscribe_plugin_to_website(website_id)`
-  * **Unsubscribe Plugin From Website**: `client.unsubscribe_plugin_from_website(website_id, plugin_id)`
-  * **Get Subscription Settings**: `client.get_subscription_settings(website_id, plugin_id)`
-  * **Save Subscription Settings**: `client.save_subscription_settings(website_id, plugin_id, settings)`
-  * **Update Subscription Settings**: `client.update_subscription_settings(website_id, plugin_id, settings)`
-  * **Forward Plugin Payload To Channel**: `client.forward_plugin_payload_to_channel(website_id, plugin_id, data)`
-  * **Dispatch Plugin Event**: `client.dispatch_plugin_event(website_id, plugin_id, data)`
+  * **List All Active Subscriptions**: `client.list_all_active_subscriptions()` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-active-subscriptions)
+  * **List Subscriptions For Website**: `client.list_subscriptions_website(website_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-subscriptions-for-a-website)
+  * **Get Subscription Details**: `client.get_subscription_details(website_id, plugin_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-details)
+  * **Subscribe Website To Plugin**: `client.subscribe_plugin_to_website(website_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#subscribe-website-to-plugin)
+  * **Unsubscribe Plugin From Website**: `client.unsubscribe_plugin_from_website(website_id, plugin_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#subscribe-website-to-plugin)
+  * **Get Subscription Settings**: `client.get_subscription_settings(website_id, plugin_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-settings)
+  * **Save Subscription Settings**: `client.save_subscription_settings(website_id, plugin_id, settings)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#save-subscription-settings)
+  * **Update Subscription Settings**: `client.update_subscription_settings(website_id, plugin_id, settings)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-subscription-settings)
+  * **Forward Plugin Payload To Channel**: `client.forward_plugin_payload_to_channel(website_id, plugin_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#forward-plugin-payload-to-channel)
+  * **Dispatch Plugin Event**: `client.dispatch_plugin_event(website_id, plugin_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#dispatch-plugin-event)
 
 ### Bucket
 
 * **Bucket URL**
-  * **Generate Bucket URL**: `client.bucket.generate_bucket_url(data)`
+  * **Generate Bucket URL**: `client.bucket.generate_bucket_url(data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#generate-bucket-url)
