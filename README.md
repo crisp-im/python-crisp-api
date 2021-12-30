@@ -229,7 +229,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
     * `client.get_subscription_details(website_id, plugin_id)` 
   * **Subscribe Website To Plugin** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#subscribe-website-to-plugin) 
     * `client.subscribe_plugin_to_website(website_id)` 
-  * **Unsubscribe Plugin From Website** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#subscribe-website-to-plugin)
+  * **Unsubscribe Plugin From Website** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#unsubscribe-plugin-from-website)
     * `client.unsubscribe_plugin_from_website(website_id, plugin_id)` 
   * **Get Subscription Settings** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-settings)
     * `client.get_subscription_settings(website_id, plugin_id)` 
