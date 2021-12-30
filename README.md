@@ -181,11 +181,11 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
     * `client.website.delete_website(website_id)` 
 
 * **Website Batch**
-  * **Batch Resolve Items** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-resolve-items)
+  * **Batch Resolve Items** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-resolve-items)
     * `client.website.batch_resolve_items(website_id, data)` 
-  * **Batch Read Items** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-read-items)
+  * **Batch Read Items** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-read-items)
     * `client.website.batch_read_items(website_id, data)` 
-  * **Batch Remove Items** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-remove-items)
+  * **Batch Remove Items** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-remove-items)
     * `client.website.batch_remove_items(website_id, data)` 
 
 * **Website Availability**
@@ -213,23 +213,23 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
 ### Plugin
 
 * **Plugin Connect**
-  * **Get Plugin Connect Account** [`[Reference](https://docs.crisp.chat/references/rest-api/v1/#get-connect-account)user`, `plugin`]: 
+  * **Get Plugin Connect Account** [`plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-connect-account)
     * `client.get_connect_account()` 
-  * **Check Plugin Connect Session Validity** [`[Reference](https://docs.crisp.chat/references/rest-api/v1/#check-connect-session-validity)user`, `plugin`]: 
+  * **Check Plugin Connect Session Validity** [`plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#check-connect-session-validity)
     * `client.check_connect_session_validity()` 
-  * **List All Connected Websites** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-connect-websites)
+  * **List All Connected Websites** [`plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-connect-websites)
     * `client.list_all_connect_websites(page_number, filter_configured)` 
 
 * **Plugin Subscription**
-  * **List All Active Subscriptions** [`user`, [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-active-subscriptions)`plugin`]: 
+  * **List All Active Subscriptions** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-active-subscriptions)
     * `client.list_all_active_subscriptions()` 
-  * **List Subscriptions For Website** [`user`, `plugi[Reference](https://docs.crisp.chat/references/rest-api/v1/#list-subscriptions-for-a-website)n`]: 
+  * **List Subscriptions For Website** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-subscriptions-for-a-website) 
     * `client.list_subscriptions_website(website_id)` 
-  * **Get Subscription Details** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-details)
+  * **Get Subscription Details** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-details)
     * `client.get_subscription_details(website_id, plugin_id)` 
-  * **Subscribe Website To Plugin** [`user`, `plugin`]:[Reference](https://docs.crisp.chat/references/rest-api/v1/#subscribe-website-to-plugin) 
+  * **Subscribe Website To Plugin** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#subscribe-website-to-plugin) 
     * `client.subscribe_plugin_to_website(website_id)` 
-  * **Unsubscribe Plugin From Website** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#subscribe-website-to-plugin)
+  * **Unsubscribe Plugin From Website** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#subscribe-website-to-plugin)
     * `client.unsubscribe_plugin_from_website(website_id, plugin_id)` 
   * **Get Subscription Settings** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-settings)
     * `client.get_subscription_settings(website_id, plugin_id)` 
