@@ -4,10 +4,12 @@ The Crisp API Python wrapper. Authenticate, send messages, fetch conversations, 
 
 Copyright 2018 Crisp IM SARL. See LICENSE for copying information.
 
-* **📝 Implements**: [Crisp Platform - API ~ v1](https://docs.crisp.chat/api/v1/) at reference revision: 12/31/2017
+* **📝 Implements**: [REST API Reference (V1)](https://docs.crisp.chat/references/rest-api/v1/) at revision: 12/31/2017
 * **😘 Maintainers**: [@valeriansaliou](https://github.com/valeriansaliou), [@eliottvincent](https://github.com/eliottvincent)
 
 ## Usage
+
+You may follow the [REST API Quickstart](https://docs.crisp.chat/guides/rest-api/quickstart/) guide, which will get you running with the REST API in minutes.
 
 Install the library:
 
@@ -26,6 +28,7 @@ Construct a new authenticated Crisp client with your `identifier` and `key` toke
 ```python
 client = Crisp()
 
+client.set_tier("plugin")
 client.authenticate(identifier, key)
 ```
 
@@ -33,7 +36,7 @@ Then, your client is ready to be consumed!
 
 ## Authentication
 
-To authenticate against the API, generate your session identifier and session key **once** using the [Crisp token generation utility](https://go.crisp.chat/account/token/). You'll get a token keypair made of 2 values.
+To authenticate against the API, obtain your authentication token keypair by following the [REST API Authentication](https://docs.crisp.chat/guides/rest-api/authentication/) guide. You'll get a token keypair made of 2 values.
 
 **Keep your token keypair values private, and store them safely for long-term use.**
 
@@ -42,24 +45,19 @@ Then, add authentication parameters to your `client` instance right after you cr
 ```python
 client = Crisp()
 
-# Make sure to use the correct tier if you are authenticating a plugin
-# eg. with a permanent token generated from Crisp Marketplace
-client.set_tier("plugin")
-
-# Authenticate to API (identifier, key)
+# Authenticate to API with your plugin token (identifier, key)
 # eg. client.authenticate("13937834-f6ce-4556-ae4f-9e0c54faf038", "eb6c3623245521d7a6c35f5b29f3fa756e893f034ed551d84518961c5ff16dec")
+client.set_tier("plugin")
 client.authenticate(identifier, key)
 
 # Now, you can use authenticated API sections.
 ```
 
-**🔴 Important: Make sure to generate your token once, and use the same token keys in all your subsequent requests to the API. Do not generate too many tokens, as we may invalidate your older tokens to make room for newer tokens.**
-
 ## Resource Methods
 
-Most useful available Crisp API resources are implemented. **Programmatic methods names are named after their label name in the [API Reference](https://docs.crisp.chat/api/v1/)**.
+Most useful available Crisp API resources are implemented. **Programmatic methods names are named after their label name in the [REST API Reference](https://docs.crisp.chat/references/rest-api/v1/)**.
 
-Thus, it is straightforward to look for them in the library while reading the [API Reference](https://docs.crisp.chat/api/v1/).
+Thus, it is straightforward to look for them in the library while reading the [REST API Reference](https://docs.crisp.chat/references/rest-api/v1/).
 
 In the following method prototypes, `crisp` is to be replaced with your Crisp API instance. For example, instanciate `client = Crisp()` and then call eg: `client.website.list_conversations(website_id, 1)`.
 
@@ -128,6 +126,23 @@ client.website.send_message_in_conversation(
   + **Save People Data**: `client.website.save_people_data(website_id, people_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#save-people-data)
   + **Get People Subscription Status**: `client.website.get_people_subscription_status(website_id, people_id)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-subscription-status)
   + **Update People Subscription Status**: `client.website.update_people_subscription_status(website_id, people_id, data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-people-subscription-status)
+  * **Get People Statistics**: `client.website.get_people_statistics(website_id)`
+  * **List People Segments**: `client.website.list_people_segments(website_id, page_number)`
+  * **List People Profiles**: `client.website.list_people_profiles(website_id, page_number)`
+  * **Add New People Profile**: `client.website.add_new_people_profile(website_id, data)`
+  * **Check If People Profile Exists**: `client.website.check_people_profile_exists(website_id, people_id)`
+  * **Get People Profile**: `client.website.get_people_profile(website_id, people_id)`
+  * **Save People Profile**: `client.website.save_people_profile(website_id, people_id, data)`
+  * **Update People Profile**: `client.website.update_people_profile(website_id, people_id, data)`
+  * **Remove People Profile**: `client.website.remove_people_profile(website_id, people_id)`
+  * **List People Conversations**: `client.website.list_people_conversations(website_id, people_id, page_number)`
+  + **Add A People Event**: `client.website.add_people_event(website_id, people_id, data)`
+  + **List People Events**: `client.website.list_people_events(website_id, people_id, page_number)`
+  + **Get People Data**: `client.website.get_people_data(website_id, people_id)`
+  + **Save People Data**: `client.website.save_people_data(website_id, people_id, data)`
+  + **Update People Data**: `client.website.update_people_data(website_id, people_id, data)`
+  + **Get People Subscription Status**: `client.website.get_people_subscription_status(website_id, people_id)`
+  + **Update People Subscription Status**: `client.website.update_people_subscription_status(website_id, people_id, data)`
 
 * **Website Base**
   * **Create Website**: `client.website.create_website(data)` [Reference](https://docs.crisp.chat/references/rest-api/v1/#create-website)
