@@ -57,7 +57,7 @@ client.authenticate(identifier, key)
 
 Most useful available Crisp API resources are implemented. **Programmatic methods names are named after their label name in the [REST API Reference](https://docs.crisp.chat/references/rest-api/v1/)**.
 
-Thus, it is straightforward to look for them in the library while reading the [REST API Reference](https://docs.crisp.chat/references/rest-api/v1/).
+All methods that you will most likely need when building a Crisp integration are prefixed with a star symbol (⭐).
 
 In the following method prototypes, `crisp` is to be replaced with your Crisp API instance. For example, instanciate `client = Crisp()` and then call eg: `client.website.list_conversations(website_id, 1)`.
 
@@ -135,7 +135,7 @@ client.website.send_message_in_conversation(
   * **Request Email Transcript For Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#request-email-transcript-for-conversation)
     * `client.website.request_email_transcript_for_conversation(website_id, session_id, data)` 
 
-* **Website People**
+* **Website People** _(these are your end-users)_
   * **Get People Statistics** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-statistics)
     * `client.website.get_people_statistics(website_id)` 
   * **List People Segments** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-suggested-people-segments)
