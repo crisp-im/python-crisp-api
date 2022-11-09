@@ -78,6 +78,9 @@ class WebsiteResource(object):
   def list_visitors(self, website_id, page_number):
     return self.parent.get(self.__url_website(website_id, f"/visitors/list/{page_number}"))
 
+  def list_session_ratings(self, website_id, page_number):
+    return self.parent.get(self.__url_website(website_id, f"/rating/sessions/list/{page_number}"))
+
   def search_conversations(self, website_id, page_number, search_query = "", search_type = "", search_operator = "", include_empty = "", filter_unread = "", filter_resolved = "", filter_not_resolved = "", filter_mention = "", filter_assigned = "", filter_unassigned = "", filter_date_start = "", filter_date_end = "", order_date_created = "", order_date_updated = ""):
     resource_url = ""
     query_parameters = []
