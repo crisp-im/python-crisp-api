@@ -118,11 +118,11 @@ class WebsiteResource(object):
   def get_messages_in_conversation(self, website_id, session_id, query):
     return self.parent.get(self.__url_conversation(website_id, session_id, "/messages"), query)
 
-  def get_a_message_in_conversation(self, website_id, session_id, fingerprint):
-    return self.parent.get(self.__url_conversation(website_id, session_id, f"/message/{fingerprint}"))
-
   def send_message_in_conversation(self, website_id, session_id, data):
     return self.parent.post(self.__url_conversation(website_id, session_id, "/message"), data)
+
+  def get_message_in_conversation(self, website_id, session_id, fingerprint):
+    return self.parent.get(self.__url_conversation(website_id, session_id, f"/message/{fingerprint}"))
 
   def update_message_in_conversation(self, website_id, session_id, fingerprint, data):
     return self.parent.patch(self.__url_conversation(website_id, session_id, f"/message/{fingerprint}"), data)
