@@ -882,53 +882,53 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
 
 * **Plugin Connect**
   * **Get Plugin Connect Account** [`plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-connect-account)
-    * `client.get_connect_account()`
+    * `client.plugin.get_connect_account()`
     * <details>
       <summary>See Example</summary>
 
       ```python
-      client.get_connect_account();
+      client.plugin.get_connect_account();
       ```
       </details>
 
   * **Check Plugin Connect Session Validity** [`plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#check-connect-session-validity)
-    * `client.check_connect_session_validity()`
+    * `client.plugin.check_connect_session_validity()`
     * <details>
       <summary>See Example</summary>
 
       ```python
-      client.check_connect_session_validity();
+      client.plugin.check_connect_session_validity();
       ```
       </details>
 
   * **List All Connected Websites** [`plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-connect-websites)
-    * `client.list_all_connect_websites(page_number, filter_configured)`
+    * `client.plugin.list_all_connect_websites(page_number, filter_configured)`
     * <details>
       <summary>See Example</summary>
 
       ```python
       page_number = 1
 
-      client.list_all_connect_websites(page_number, filter_configured);
+      client.plugin.list_all_connect_websites(page_number, filter_configured);
       ```
       </details>
 
 
 * **Plugin Subscription**
   * **List All Active Subscriptions** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-active-subscriptions)
-    * `client.list_all_active_subscriptions()`
+    * `client.plugin.list_all_active_subscriptions()`
     * <details>
       <summary>See Example</summary>
 
       ```python
-      client.list_all_active_subscriptions();
+      client.plugin.list_all_active_subscriptions();
       ```
       </details>
 
   * **List Subscriptions For Website** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-subscriptions-for-a-website)
-    * `client.list_subscriptions_website(website_id)`
+    * `client.plugin.list_subscriptions_website(website_id)`
   * **Get Subscription Details** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-details)
-    * `client.get_subscription_details(website_id, plugin_id)`
+    * `client.plugin.get_subscription_details(website_id, plugin_id)`
     * <details>
       <summary>See Example</summary>
 
@@ -936,14 +936,14 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
       plugin_id = "c64f3595-adee-425a-8d3a-89d47f7ed6bb"
 
-      client.get_subscription_details(website_id, plugin_id);
+      client.plugin.get_subscription_details(website_id, plugin_id);
       ```
       </details>
 
   * **Subscribe Website To Plugin** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#subscribe-website-to-plugin)
-    * `client.subscribe_plugin_to_website(website_id)`
+    * `client.plugin.subscribe_plugin_to_website(website_id)`
   * **Unsubscribe Plugin From Website** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#unsubscribe-plugin-from-website)
-    * `client.unsubscribe_plugin_from_website(website_id, plugin_id)`
+    * `client.plugin.unsubscribe_plugin_from_website(website_id, plugin_id)`
     * <details>
       <summary>See Example</summary>
 
@@ -951,12 +951,12 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
       plugin_id = "c64f3595-adee-425a-8d3a-89d47f7ed6bb"
 
-      client.unsubscribe_plugin_from_website(website_id, plugin_id);
+      client.plugin.unsubscribe_plugin_from_website(website_id, plugin_id);
       ```
       </details>
 
   * **Get Subscription Settings** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-settings)
-    * `client.get_subscription_settings(website_id, plugin_id)`
+    * `client.plugin.get_subscription_settings(website_id, plugin_id)`
     * <details>
       <summary>See Example</summary>
 
@@ -964,12 +964,12 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
       plugin_id = "c64f3595-adee-425a-8d3a-89d47f7ed6bb"
 
-      client.get_subscription_settings(website_id, plugin_id);
+      client.plugin.get_subscription_settings(website_id, plugin_id);
       ```
       </details>
 
   * **Save Subscription Settings** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#save-subscription-settings)
-    * `client.save_subscription_settings(website_id, plugin_id, settings)`
+    * `client.plugin.save_subscription_settings(website_id, plugin_id, settings)`
     * <details>
       <summary>See Example</summary>
 
@@ -983,12 +983,12 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
         }
       }
 
-      client.save_subscription_settings(website_id, plugin_id, settings);
+      client.plugin.save_subscription_settings(website_id, plugin_id, settings);
       ```
       </details>
 
   * **Update Subscription Settings** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-subscription-settings)
-    * `client.update_subscription_settings(website_id, plugin_id, settings)`
+    * `client.plugin.update_subscription_settings(website_id, plugin_id, settings)`
     * <details>
       <summary>See Example</summary>
 
@@ -1002,12 +1002,12 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
         }
       }
 
-      client.update_subscription_settings(website_id, plugin_id, settings);
+      client.plugin.update_subscription_settings(website_id, plugin_id, settings);
       ```
       </details>
 
   * **Forward Plugin Payload To Channel** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#forward-plugin-payload-to-channel)
-    * `client.forward_plugin_payload_to_channel(website_id, plugin_id, data)`
+    * `client.plugin.forward_plugin_payload_to_channel(website_id, plugin_id, data)`
     * <details>
       <summary>See Example</summary>
 
@@ -1022,12 +1022,12 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
         }
       }
 
-      client.forward_plugin_payload_to_channel(website_id, plugin_id, data);
+      client.plugin.forward_plugin_payload_to_channel(website_id, plugin_id, data);
       ```
       </details>
 
   * **Dispatch Plugin Event** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#dispatch-plugin-event)
-    * `client.dispatch_plugin_event(website_id, plugin_id, data)`
+    * `client.plugin.dispatch_plugin_event(website_id, plugin_id, data)`
     * <details>
       <summary>See Example</summary>
 
@@ -1043,7 +1043,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
         }
       }
 
-      client.dispatch_plugin_event(website_id, plugin_id, data);
+      client.plugin.dispatch_plugin_event(website_id, plugin_id, data);
       ```
       </details>
 
