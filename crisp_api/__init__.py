@@ -11,6 +11,7 @@ from requests.auth import HTTPBasicAuth
 
 from .errors.route import RouteError
 from .resources.bucket import BucketResource
+from .resources.plugin import PluginResource
 from .resources.website import WebsiteResource
 
 class Crisp(object):
@@ -27,6 +28,7 @@ class Crisp(object):
     self.__timeout = None
 
     self.bucket = BucketResource(self)
+    self.plugin = PluginResource(self)
     self.website = WebsiteResource(self)
 
   def authenticate(self, identifier, key):
