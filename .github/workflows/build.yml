@@ -31,8 +31,9 @@ jobs:
 
       - name: Publish
         id: publish
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
-          repository_url: https://upload.pypi.org/legacy/
+        run: |
+          python3 -m twine upload --repository crisp-api dist/*
+        env:
+          TWINE_USERNAME: "__token__"
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+          TWINE_REPOSITORY_URL: "https://upload.pypi.org/legacy/"
