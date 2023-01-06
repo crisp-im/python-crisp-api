@@ -1,0 +1,38 @@
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+name: Build and Release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        id: checkout
+        uses: actions/checkout@v3
+
+      - name: Install Python
+        id: install_python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install dependencies
+        id: install_dependencies
+        run: |
+          python3 -m pip install --user --upgrade setuptools wheel
+
+      - name: Build
+        id: build
+        run: |
+          python3 setup.py sdist bdist_wheel
+
+      - name: Publish
+        id: publish
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
+          repository_url: https://upload.pypi.org/legacy/
