@@ -16,7 +16,7 @@ from .resources.website import WebsiteResource
 
 class Crisp(object):
   REQUEST_HEADERS = {
-    "User-Agent": "python-crisp-api/1.1.14",
+    "User-Agent": "python-crisp-api/1.1.15",
     "Content-Type": "application/json"
   }
 
