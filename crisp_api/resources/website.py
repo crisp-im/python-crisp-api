@@ -153,6 +153,9 @@ class WebsiteResource(object):
   def list_conversation_events(self, website_id, session_id, page_number):
     return self.parent.get(self.__url_conversation(website_id, session_id, f"/events/{page_number}"))
 
+  def list_conversation_files(self, website_id, session_id, page_number):
+    return self.parent.get(self.__url_conversation(website_id, session_id, f"/files/{page_number}"))
+
   def get_conversation_state(self, website_id, session_id):
     return self.parent.get(self.__url_conversation(website_id, session_id, "/state"))
 

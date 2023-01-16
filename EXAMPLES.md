@@ -221,6 +221,16 @@ client.website.list_conversation_events(website_id, session_id, page_number);
 
 =========================
 
+https://docs.crisp.chat/references/rest-api/v1/#list-conversation-files
+
+website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
+session_id = "session_700c65e1-85e2-465a-b9ac-ecb5ec2c9881"
+page_number = 1
+
+client.website.list_conversation_files(website_id, session_id, page_number);
+
+=========================
+
 https://docs.crisp.chat/references/rest-api/v1/#get-conversation-state
 
 website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
