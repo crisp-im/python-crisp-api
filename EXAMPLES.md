@@ -519,6 +519,7 @@ data = {
     "visitor_compose": false,
     "file_transfer": true,
     "helpdesk_link": true,
+    "helpdesk_only": false,
     "status_health_dead": true,
     "check_domain": false,
     "color_theme": "blue",
