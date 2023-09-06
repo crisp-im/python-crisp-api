@@ -437,7 +437,7 @@ client.website.send_message_in_conversation(
       website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
       session_id = "session_700c65e1-85e2-465a-b9ac-ecb5ec2c9881"
 
-      data = "unresolved"
+      data = {"state":"unresolved"}
 
       client.website.change_conversation_state(website_id, session_id, data);
       ```
