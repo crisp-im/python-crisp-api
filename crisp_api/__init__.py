@@ -56,8 +56,8 @@ class Crisp(object):
   def set_timeout(self, timeout):
     self.__timeout = timeout
 
-  def get(self, resource, query={}):
-    return self.__do_request("GET", resource, query=query)
+  def get(self, resource, query=None):
+    return self.__do_request("GET", resource, query=(query or {}))
 
   def head(self, resource):
     return self.__do_request("HEAD", resource)
@@ -65,14 +65,14 @@ class Crisp(object):
   def remove(self, resource):
     return self.__do_request("DELETE", resource)
 
-  def post(self, resource, data={}):
-    return self.__do_request("POST", resource, data=data)
+  def post(self, resource, data=None):
+    return self.__do_request("POST", resource, data=(data or {}))
 
-  def patch(self, resource, data={}):
-    return self.__do_request("PATCH", resource, data=data)
+  def patch(self, resource, data=None):
+    return self.__do_request("PATCH", resource, data=(data or {}))
 
-  def put(self, resource, data={}):
-    return self.__do_request("PUT", resource, data=data)
+  def put(self, resource, data=None):
+    return self.__do_request("PUT", resource, data=(data or {}))
 
   def __do_request(self, method, resource, query=None, data=None):
     auth = None
