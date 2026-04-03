@@ -81,7 +81,7 @@ client.website.send_message_in_conversation(
 )
 ```
 
-**⚠️ Note that, depending on your authentication token tier, which is either `user` or `plugin`, you may not be allowed to use all methods from the library. When in doubt, refer to the library method descriptions below. Most likely, you are using a `plugin` token.**
+**⚠️ Note that, depending on your authentication token tier, which is either `user`, `website` or `plugin`, you may not be allowed to use all methods from the library. When in doubt, refer to the library method descriptions below. Most likely, you are using a `plugin` token.**
 
 ### Website
 
