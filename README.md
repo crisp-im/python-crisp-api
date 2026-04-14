@@ -86,7 +86,7 @@ client.website.send_message_in_conversation(
 ### Website
 
 * **Website Conversations**
-  * ⭐ **List Conversations** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversations)
+  * ⭐ **List Conversations**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversations)
     * `client.website.list_conversations(website_id, page_number)`
     * <details>
       <summary>See Example</summary>
@@ -99,7 +99,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Search Conversations** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversations)
+  * **Search Conversations**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversations)
     * `client.website.search_conversations(website_id, page_number, search_query, search_type, search_operator, include_empty, filter_unread, filter_resolved, filter_not_resolved, filter_mention, filter_assigned, filter_unassigned, filter_date_start, filter_date_end, order_date_created", order_date_updated)`
     * <details>
       <summary>See Example</summary>
@@ -114,7 +114,7 @@ client.website.send_message_in_conversation(
 
 
 * **Website Conversation**
-  * ⭐ **Create A New Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#create-a-new-conversation)
+  * ⭐ **Create A New Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#create-a-new-conversation)
     * `client.website.create_new_conversation(website_id)`
     * <details>
       <summary>See Example</summary>
@@ -126,7 +126,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Check If Conversation Exists** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#check-if-conversation-exists)
+  * **Check If Conversation Exists**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#check-if-conversation-exists)
     * `client.website.check_conversation_exists(website_id, session_id)`
     * <details>
       <summary>See Example</summary>
@@ -139,7 +139,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Get A Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-a-conversation)
+  * ⭐ **Get A Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-a-conversation)
     * `client.website.get_conversation(website_id, session_id)`
     * <details>
       <summary>See Example</summary>
@@ -152,7 +152,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Remove A Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#remove-a-conversation)
+  * **Remove A Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#remove-a-conversation)
     * `client.website.remove_conversation(website_id, session_id)`
     * <details>
       <summary>See Example</summary>
@@ -165,7 +165,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Initiate A Conversation With Existing Session** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#initiate-a-conversation-with-existing-session)
+  * **Initiate A Conversation With Existing Session**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#initiate-a-conversation-with-existing-session)
     * `client.website.initiate_conversation_with_existing_session(website_id, session_id)`
     * <details>
       <summary>See Example</summary>
@@ -178,7 +178,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Get Messages In Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-messages-in-conversation)
+  * ⭐ **Get Messages In Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-messages-in-conversation)
     * `client.website.get_messages_in_conversation(website_id, session_id, query)`
     * <details>
       <summary>See Example</summary>
@@ -191,7 +191,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Send A Message In Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#send-a-message-in-conversation)
+  * **Send A Message In Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#send-a-message-in-conversation)
     * `client.website.send_message_in_conversation(website_id, session_id, query)`
     * <details>
       <summary>See Example</summary>
@@ -211,7 +211,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Get A Message In Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-a-message-in-conversation)
+  * **Get A Message In Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-a-message-in-conversation)
     * `client.website.get_message_in_conversation(website_id, session_id, fingerprint)`
     * <details>
       <summary>See Example</summary>
@@ -225,7 +225,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Update A Message In Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-a-message-in-conversation)
+  * **Update A Message In Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-a-message-in-conversation)
     * `client.website.update_message_in_conversation(website_id, session_id, fingerprint, data)`
     * <details>
       <summary>See Example</summary>
@@ -241,7 +241,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Compose A Message In Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#compose-a-message-in-conversation)
+  * **Compose A Message In Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#compose-a-message-in-conversation)
     * `client.website.compose_message_in_conversation(website_id, session_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -259,7 +259,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Mark Messages As Read In Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#mark-messages-as-read-in-conversation)
+  * ⭐ **Mark Messages As Read In Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#mark-messages-as-read-in-conversation)
     * `client.website.mark_messages_read_in_conversation(website_id, session_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -280,7 +280,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Mark Messages As Delivered In Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#mark-messages-as-delivered-in-conversation)
+  * ⭐ **Mark Messages As Delivered In Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#mark-messages-as-delivered-in-conversation)
     * `client.website.mark_messages_delivered_in_conversation(website_id, session_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -301,7 +301,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Get Conversation Routing Assign** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-conversation-routing-assign)
+  * ⭐ **Get Conversation Routing Assign**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-conversation-routing-assign)
     * `client.website.get_conversation_routing_assign(website_id, session_id)`
     * <details>
       <summary>See Example</summary>
@@ -314,7 +314,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Assign Conversation Routing** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#assign-conversation-routing)
+  * ⭐ **Assign Conversation Routing**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#assign-conversation-routing)
     * `client.website.assign_conversation_routing(website_id, session_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -333,7 +333,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Get Conversation Metas** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-conversation-metas)
+  * ⭐ **Get Conversation Metas**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-conversation-metas)
     * `client.website.get_conversation_metas(website_id, session_id)`
     * <details>
       <summary>See Example</summary>
@@ -346,7 +346,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Update Conversation Metas** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-conversation-metas)
+  * ⭐ **Update Conversation Metas**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-conversation-metas)
     * `client.website.update_conversation_metas(website_id, session_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -373,7 +373,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **List Conversation Pages** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversation-pages)
+  * **List Conversation Pages**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversation-pages)
     * `client.website.list_conversation_pages(website_id, session_id, page_number)`
     * <details>
       <summary>See Example</summary>
@@ -387,7 +387,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **List Conversation Events** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversation-events)
+  * **List Conversation Events**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversation-events)
     * `client.website.list_conversation_events(website_id, session_id, page_number)`
     * <details>
       <summary>See Example</summary>
@@ -401,7 +401,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **List Conversation Files** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversation-files)
+  * **List Conversation Files**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-conversation-files)
     * `client.website.list_conversation_files(website_id, session_id, page_number)`
     * <details>
       <summary>See Example</summary>
@@ -415,7 +415,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Get Conversation State** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-conversation-state)
+  * **Get Conversation State**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-conversation-state)
     * `client.website.get_conversation_state(website_id, session_id)`
     * <details>
       <summary>See Example</summary>
@@ -428,7 +428,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Change Conversation State** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#change-conversation-state)
+  * ⭐ **Change Conversation State**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#change-conversation-state)
     * `client.website.change_conversation_state(website_id, session_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -443,7 +443,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Get Block Status For Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-block-status-for-conversation)
+  * **Get Block Status For Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-block-status-for-conversation)
     * `client.website.get_block_status_for_conversation(website_id, session_id)`
     * <details>
       <summary>See Example</summary>
@@ -456,7 +456,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Block Incoming Messages For Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#block-incoming-messages-for-conversation)
+  * **Block Incoming Messages For Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#block-incoming-messages-for-conversation)
     * `client.website.block_incoming_messages_for_conversation(website_id, session_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -471,7 +471,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **Request Email Transcript For Conversation** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#request-email-transcript-for-conversation)
+  * **Request Email Transcript For Conversation**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#request-email-transcript-for-conversation)
     * `client.website.request_email_transcript_for_conversation(website_id, session_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -491,7 +491,7 @@ client.website.send_message_in_conversation(
 
 
 * **Website People** _(these are your end-users)_
-  * **Get People Statistics** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-statistics)
+  * **Get People Statistics**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-statistics)
     * `client.website.get_people_statistics(website_id)`
     * <details>
       <summary>See Example</summary>
@@ -503,7 +503,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **List People Segments** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-suggested-people-segments)
+  * **List People Segments**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-suggested-people-segments)
     * `client.website.list_people_segments(website_id, page_number)`
     * <details>
       <summary>See Example</summary>
@@ -516,7 +516,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **List People Profiles** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-people-profiles)
+  * ⭐ **List People Profiles**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-people-profiles)
     * `client.website.list_people_profiles(website_id, page_number)`
     * <details>
       <summary>See Example</summary>
@@ -529,7 +529,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Add New People Profile** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#add-new-people-profile)
+  * ⭐ **Add New People Profile**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#add-new-people-profile)
     * `client.website.add_new_people_profile(website_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -548,7 +548,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Check If People Profile Exists** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#check-if-people-profile-exists)
+  * ⭐ **Check If People Profile Exists**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#check-if-people-profile-exists)
     * `client.website.check_people_profile_exists(website_id, people_id)`
     * <details>
       <summary>See Example</summary>
@@ -561,7 +561,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Get People Profile** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-profile)
+  * ⭐ **Get People Profile**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-profile)
     * `client.website.get_people_profile(website_id, people_id)`
     * <details>
       <summary>See Example</summary>
@@ -574,7 +574,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Save People Profile** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#save-people-profile)
+  * ⭐ **Save People Profile**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#save-people-profile)
     * `client.website.save_people_profile(website_id, people_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -594,7 +594,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Update People Profile** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-people-profile)
+  * ⭐ **Update People Profile**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-people-profile)
     * `client.website.update_people_profile(website_id, people_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -614,7 +614,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * ⭐ **Remove People Profile** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#remove-people-profile)
+  * ⭐ **Remove People Profile**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#remove-people-profile)
     * `client.website.remove_people_profile(website_id, people_id)`
     * <details>
       <summary>See Example</summary>
@@ -627,7 +627,7 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  * **List People Conversations** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-people-conversations)
+  * **List People Conversations**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-people-conversations)
     * `client.website.list_people_conversations(website_id, people_id, page_number)`
     * <details>
       <summary>See Example</summary>
@@ -641,24 +641,24 @@ client.website.send_message_in_conversation(
       ```
       </details>
 
-  + **Add A People Event** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#add-a-people-event)
+  + **Add A People Event**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#add-a-people-event)
     * `client.website.add_people_event(website_id, people_id, data)`
-  + **List People Events** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-people-events)
+  + **List People Events**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-people-events)
     * `client.website.list_people_events(website_id, people_id, page_number)`
-  + **Get People Data** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-data)
+  + **Get People Data**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-data)
     * `client.website.get_people_data(website_id, people_id)`
-  + **Save People Data** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#save-people-data)
+  + **Save People Data**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#save-people-data)
     * `client.website.save_people_data(website_id, people_id, data)`
-  + **Get People Subscription Status** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-subscription-status)
+  + **Get People Subscription Status**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-people-subscription-status)
     * `client.website.get_people_subscription_status(website_id, people_id)`
-  + **Update People Subscription Status** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-people-subscription-status)
+  + **Update People Subscription Status**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-people-subscription-status)
     * `client.website.update_people_subscription_status(website_id, people_id, data)`
 
 _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
 
 
 * **Website Base**
-  * **Create Website** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#create-website)
+  * **Create Website**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#create-website)
     * `client.website.create_website(data)`
     * <details>
       <summary>See Example</summary>
@@ -668,7 +668,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Get A Website** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-a-website)
+  * **Get A Website**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-a-website)
     * `client.website.get_website(website_id)`
     * <details>
       <summary>See Example</summary>
@@ -680,7 +680,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Delete A Website** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#delete-a-website)
+  * **Delete A Website**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#delete-a-website)
     * `client.website.delete_website(website_id)`
     * <details>
       <summary>See Example</summary>
@@ -694,7 +694,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
 
 
 * **Website Batch**
-  * **Batch Resolve Items** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-resolve-items)
+  * **Batch Resolve Items**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-resolve-items)
     * `client.website.batch_resolve_items(website_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -706,7 +706,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Batch Read Items** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-read-items)
+  * **Batch Read Items**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-read-items)
     * `client.website.batch_read_items(website_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -718,7 +718,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Batch Remove Items** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-remove-items)
+  * **Batch Remove Items**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-remove-items)
     * `client.website.batch_remove_items(website_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -737,7 +737,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
 
 
 * **Website Availability**
-  * **Get Website Availability Status** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-website-availability-status)
+  * **Get Website Availability Status**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-website-availability-status)
     * `client.website.get_website_availability_status(website_id)`
     * <details>
       <summary>See Example</summary>
@@ -751,7 +751,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
 
 
 * **Website Operator**
-  * **List Website Operators** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-website-operators)
+  * **List Website Operators**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-website-operators)
     * `client.website.list_website_operators(website_id)`
     * <details>
       <summary>See Example</summary>
@@ -763,7 +763,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **List Last Active Website Operators** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-last-active-website-operators)
+  * **List Last Active Website Operators**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-last-active-website-operators)
     * `client.website.list_last_active_website_operators(website_id)`
     * <details>
       <summary>See Example</summary>
@@ -777,7 +777,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
 
 
 * **Website Settings**
-  * **Get Website Settings** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-website-settings)
+  * **Get Website Settings**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-website-settings)
     * `client.website.get_website_settings(website_id)`
     * <details>
       <summary>See Example</summary>
@@ -789,7 +789,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Update Website Settings** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-website-settings)
+  * **Update Website Settings**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-website-settings)
     * `client.website.update_website_settings(website_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -871,7 +871,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
 
 
 * **Website Visitors**
-  * **Count Visitors** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#count-visitors)
+  * **Count Visitors**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#count-visitors)
     * `client.website.count_visitors(website_id)`
     * <details>
       <summary>See Example</summary>
@@ -883,7 +883,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **List Visitors** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-visitors)
+  * **List Visitors**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-visitors)
     * `client.website.list_visitors(website_id, page_number)`
     * <details>
       <summary>See Example</summary>
@@ -900,7 +900,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
 ### Plugin
 
 * **Plugin Connect**
-  * **Get Plugin Connect Account** [`plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-connect-account)
+  * **Get Plugin Connect Account**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-connect-account)
     * `client.plugin.get_connect_account()`
     * <details>
       <summary>See Example</summary>
@@ -910,7 +910,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Check Plugin Connect Session Validity** [`plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#check-connect-session-validity)
+  * **Check Plugin Connect Session Validity**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#check-connect-session-validity)
     * `client.plugin.check_connect_session_validity()`
     * <details>
       <summary>See Example</summary>
@@ -920,7 +920,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **List All Connected Websites** [`plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-connect-websites)
+  * **List All Connected Websites**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-connect-websites)
     * `client.plugin.list_all_connect_websites(page_number, filter_configured)`
     * <details>
       <summary>See Example</summary>
@@ -934,7 +934,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
 
 
 * **Plugin Subscription**
-  * **List All Active Subscriptions** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-active-subscriptions)
+  * **List All Active Subscriptions**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-all-active-subscriptions)
     * `client.plugin.list_all_active_subscriptions()`
     * <details>
       <summary>See Example</summary>
@@ -944,9 +944,9 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **List Subscriptions For Website** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-subscriptions-for-a-website)
+  * **List Subscriptions For Website**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#list-subscriptions-for-a-website)
     * `client.plugin.list_subscriptions_website(website_id)`
-  * **Get Subscription Details** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-details)
+  * **Get Subscription Details**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-details)
     * `client.plugin.get_subscription_details(website_id, plugin_id)`
     * <details>
       <summary>See Example</summary>
@@ -959,9 +959,9 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Subscribe Website To Plugin** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#subscribe-website-to-plugin)
+  * **Subscribe Website To Plugin**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#subscribe-website-to-plugin)
     * `client.plugin.subscribe_plugin_to_website(website_id)`
-  * **Unsubscribe Plugin From Website** [`user`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#unsubscribe-plugin-from-website)
+  * **Unsubscribe Plugin From Website**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#unsubscribe-plugin-from-website)
     * `client.plugin.unsubscribe_plugin_from_website(website_id, plugin_id)`
     * <details>
       <summary>See Example</summary>
@@ -974,7 +974,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Get Subscription Settings** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-settings)
+  * **Get Subscription Settings**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-subscription-settings)
     * `client.plugin.get_subscription_settings(website_id, plugin_id)`
     * <details>
       <summary>See Example</summary>
@@ -987,7 +987,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Save Subscription Settings** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#save-subscription-settings)
+  * **Save Subscription Settings**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#save-subscription-settings)
     * `client.plugin.save_subscription_settings(website_id, plugin_id, settings)`
     * <details>
       <summary>See Example</summary>
@@ -1006,7 +1006,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Update Subscription Settings** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-subscription-settings)
+  * **Update Subscription Settings**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#update-subscription-settings)
     * `client.plugin.update_subscription_settings(website_id, plugin_id, settings)`
     * <details>
       <summary>See Example</summary>
@@ -1025,7 +1025,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Forward Plugin Payload To Channel** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#forward-plugin-payload-to-channel)
+  * **Forward Plugin Payload To Channel**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#forward-plugin-payload-to-channel)
     * `client.plugin.forward_plugin_payload_to_channel(website_id, plugin_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -1045,7 +1045,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
-  * **Dispatch Plugin Event** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#dispatch-plugin-event)
+  * **Dispatch Plugin Event**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#dispatch-plugin-event)
     * `client.plugin.dispatch_plugin_event(website_id, plugin_id, data)`
     * <details>
       <summary>See Example</summary>
@@ -1070,7 +1070,7 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
 ### Bucket
 
 * **Bucket URL**
-  * **Generate Bucket URL** [`user`, `plugin`]: [Reference](https://docs.crisp.chat/references/rest-api/v1/#generate-bucket-url)
+  * **Generate Bucket URL**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#generate-bucket-url)
     * `client.bucket.generate_bucket_url(data)`
     * <details>
       <summary>See Example</summary>
