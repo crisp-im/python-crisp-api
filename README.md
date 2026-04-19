@@ -30,7 +30,7 @@ Construct a new authenticated Crisp client with your `identifier` and `key` toke
 ```python
 client = Crisp()
 
-client.set_tier("plugin")
+client.set_tier(tier)
 client.authenticate(identifier, key)
 ```
 
