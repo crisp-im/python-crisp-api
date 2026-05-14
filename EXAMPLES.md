@@ -425,11 +425,41 @@ client.website.batch_resolve_items(website_id, data);
 
 =========================
 
+https://docs.crisp.chat/references/rest-api/v1/#batch-unresolve-items
+
+website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
+
+data = {
+  "sessions": [
+    "session_19e5240f-0a8d-461e-a661-a3123fc6eec9",
+    "session_700c65e1-85e2-465a-b9ac-ecb5ec2c9881"
+  ]
+}
+
+client.website.batch_unresolve_items(website_id, data);
+
+=========================
+
 https://docs.crisp.chat/references/rest-api/v1/#batch-read-items
 
 website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
 
 client.website.batch_read_items(website_id, data);
+
+=========================
+
+https://docs.crisp.chat/references/rest-api/v1/#batch-unread-items
+
+website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
+
+data = {
+  "sessions": [
+    "session_19e5240f-0a8d-461e-a661-a3123fc6eec9",
+    "session_700c65e1-85e2-465a-b9ac-ecb5ec2c9881"
+  ]
+}
+
+client.website.batch_unread_items(website_id, data);
 
 =========================
 
@@ -443,6 +473,72 @@ data = [
 ]
 
 client.website.batch_remove_items(website_id, data);
+
+=========================
+
+https://docs.crisp.chat/references/rest-api/v1/#batch-report-items
+
+website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
+
+data = {
+  "sessions": [
+    "session_19e5240f-0a8d-461e-a661-a3123fc6eec9",
+    "session_700c65e1-85e2-465a-b9ac-ecb5ec2c9881"
+  ],
+  "flag": "spam"
+}
+
+client.website.batch_report_items(website_id, data);
+
+=========================
+
+https://docs.crisp.chat/references/rest-api/v1/#batch-block-items
+
+website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
+
+data = {
+  "sessions": [
+    "session_19e5240f-0a8d-461e-a661-a3123fc6eec9",
+    "session_700c65e1-85e2-465a-b9ac-ecb5ec2c9881"
+  ],
+  "blocked": True
+}
+
+client.website.batch_block_items(website_id, data);
+
+=========================
+
+https://docs.crisp.chat/references/rest-api/v1/#batch-routing-items
+
+website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
+
+data = {
+  "sessions": [
+    "session_19e5240f-0a8d-461e-a661-a3123fc6eec9",
+    "session_700c65e1-85e2-465a-b9ac-ecb5ec2c9881"
+  ],
+  "assigned": {
+    "user_id": "a4c32c68-be91-4e29-b97e-b3b6af886eaa"
+  }
+}
+
+client.website.batch_routing_items(website_id, data);
+
+=========================
+
+https://docs.crisp.chat/references/rest-api/v1/#batch-inbox-items
+
+website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
+
+data = {
+  "sessions": [
+    "session_19e5240f-0a8d-461e-a661-a3123fc6eec9",
+    "session_700c65e1-85e2-465a-b9ac-ecb5ec2c9881"
+  ],
+  "inbox_id": "d42e8b3b-ea8f-4e79-a9f8-d0e467fc1c31"
+}
+
+client.website.batch_inbox_items(website_id, data);
 
 =========================
 
