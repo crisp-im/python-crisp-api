@@ -50,11 +50,29 @@ class WebsiteResource(object):
   def batch_resolve_items(self, website_id, data):
     return self.parent.patch(self.__url_website(website_id, "/batch/resolve"), data)
 
+  def batch_unresolve_items(self, website_id, data):
+    return self.parent.patch(self.__url_website(website_id, "/batch/unresolve"), data)
+
   def batch_read_items(self, website_id, data):
     return self.parent.patch(self.__url_website(website_id, "/batch/read"), data)
 
+  def batch_unread_items(self, website_id, data):
+    return self.parent.patch(self.__url_website(website_id, "/batch/unread"), data)
+
   def batch_remove_items(self, website_id, data):
     return self.parent.patch(self.__url_website(website_id, "/batch/remove"), data)
+
+  def batch_report_items(self, website_id, data):
+    return self.parent.post(self.__url_website(website_id, "/batch/report"), data)
+
+  def batch_block_items(self, website_id, data):
+    return self.parent.patch(self.__url_website(website_id, "/batch/block"), data)
+
+  def batch_routing_items(self, website_id, data):
+    return self.parent.patch(self.__url_website(website_id, "/batch/routing"), data)
+
+  def batch_inbox_items(self, website_id, data):
+    return self.parent.patch(self.__url_website(website_id, "/batch/inbox"), data)
 
   def get_website_availability_status(self, website_id):
     return self.parent.get(self.__url_website(website_id, "/availability/status"))
