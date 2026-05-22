@@ -812,7 +812,6 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
         "emails": {
           "rating": true,
           "transcript": true,
-          "enrich": true,
           "junk_filter": true
         },
         "chatbox": {
