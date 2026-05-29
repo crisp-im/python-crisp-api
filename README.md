@@ -855,6 +855,52 @@ _👉 Notice: The `peopleID` argument can be an email or the `peopleID`._
       ```
       </details>
 
+  * **Batch Data Items**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-data-items)
+    * `client.website.batch_data_items(website_id, data)`
+    * <details>
+      <summary>See Example</summary>
+
+      ```python
+      website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
+
+      data = {
+        "sessions": [
+          "session_19e5240f-0a8d-461e-a661-a3123fc6eec9",
+          "session_700c65e1-85e2-465a-b9ac-ecb5ec2c9881"
+        ],
+        "data": {
+          "plan": "pro",
+          "subscribed": True
+        }
+      }
+
+      client.website.batch_data_items(website_id, data);
+      ```
+      </details>
+
+  * **Batch Segments Items**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#batch-segments-items)
+    * `client.website.batch_segments_items(website_id, data)`
+    * <details>
+      <summary>See Example</summary>
+
+      ```python
+      website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
+
+      data = {
+        "sessions": [
+          "session_19e5240f-0a8d-461e-a661-a3123fc6eec9",
+          "session_700c65e1-85e2-465a-b9ac-ecb5ec2c9881"
+        ],
+        "segments": [
+          "vip",
+          "lead"
+        ]
+      }
+
+      client.website.batch_segments_items(website_id, data);
+      ```
+      </details>
+
 
 * **Website Availability**
   * **Get Website Availability Status**: [Reference](https://docs.crisp.chat/references/rest-api/v1/#get-website-availability-status)

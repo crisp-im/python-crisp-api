@@ -74,6 +74,12 @@ class WebsiteResource(object):
   def batch_inbox_items(self, website_id, data):
     return self.parent.patch(self.__url_website(website_id, "/batch/inbox"), data)
 
+  def batch_data_items(self, website_id, data):
+    return self.parent.patch(self.__url_website(website_id, "/batch/data"), data)
+
+  def batch_segments_items(self, website_id, data):
+    return self.parent.patch(self.__url_website(website_id, "/batch/segments"), data)
+
   def get_website_availability_status(self, website_id):
     return self.parent.get(self.__url_website(website_id, "/availability/status"))
 
