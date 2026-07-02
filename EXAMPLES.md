@@ -65,6 +65,11 @@ https://docs.crisp.chat/references/rest-api/v1/#get-messages-in-conversation
 website_id = "8c842203-7ed8-4e29-a608-7cf78a7d2fcc"
 session_id = "session_700c65e1-85e2-465a-b9ac-ecb5ec2c9881"
 
+# Either 'timestamp_before', 'timestamp_after' or 'timestamp_around'
+query = {
+  "timestamp_before": "1687314763164"
+}
+
 client.website.get_messages_in_conversation(website_id, session_id, query);
 
 =========================
